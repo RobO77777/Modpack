@@ -1,0 +1,56 @@
+
+[Recipes]
+	#[Enable/Disable] Emerald Apple Sapling Recipe [true/false] | [Default: false]
+	EmeraldAppleSaplingRecipe = false
+	#[Enable/Disable] Gold Apple Sapling Recipe [true/false] | [Default: false]
+	GoldAppleSaplingRecipe = false
+	#[Enable/Disable] Notch Apple Recipe [true/false] | [Default: false]
+	NotchAppleRecipe = false
+
+["Plants Config"]
+	#[Enable/Disable] Bonemeal use on Any Apple Plant (Override Individual Options) [true/false] | [Default: true]
+	allowBonemeal = true
+	#[Enable/Disable] Right click harvest Any Apple Plant [true/false] | [Default: true]
+	useEasyHarvest = true
+	#[Enable/Disable] Bonemeal use on Emerald Apple Plant [true/false] | [Default: true]
+	allowEmeraldBonemeal = true
+	#[Enable/Disable] Bonemeal use on Apple Plants [true/false] | [Default: true]
+	allowAppleBonemeal = true
+	#[Enable/Disable] Bonemeal use on Golden Apple Plants [true/false] | [Default: true]
+	allowGoldenBonemeal = true
+
+["World loot"]
+	#[Enable/Disable] Lootable content on Chests [true/false] | [Default: true]
+	allowWorldLoot = true
+
+["Apple Tree Generation"]
+	NOTE = "Custom biomes may could work, Use: [modid]:[biome_name] | Higher numbers has lesser chance | Unregistered values will be set to Default | Values accepted [1 - 500]"
+	#Register the biomes to Spawn Apple Trees
+	Locations = ["plains", "sunflower_plains", "flower_forest", "forest", "dark_forest", "wooded_mountains"]
+	#[Enable/Disable] Natural Apple Trees generation [true/false] | [Default: true]
+	AllowAppleTrees = true
+	#Register the Chances of each registered Biome
+	Chances = [18, 16, 1, 6, 7, 12]
+
+["Golden Tree Generation"]
+	#Register the biomes to Spawn Golden Trees
+	Locations = []
+	#[Enable/Disable] Natural Golden Trees generation [true/false] | [Default: false]
+	AllowGoldenTrees = false
+	#Register the Chances of each registered Biome
+	Chances = []
+
+["Emerald Tree Generation"]
+	#[Enable/Disable] Natural Golden Trees generation [true/false] | [Default: true]
+	AllowEmeraldTrees = true
+	#Register the biomes to Spawn Golden Trees
+	Locations = ["flower_forest"]
+	#Register the Chances of each registered Biome
+	Chances = [75]
+
+["Biome Config"]
+	#Define Apple Forest spawn Chance value
+	#Range: 1 ~ 30
+	BiomeChance = 5
+	Biomes = "[minecraft:plains, minecraft:the_void, minecraft:ocean, minecraft:desert, minecraft:mountains, minecraft:forest, minecraft:taiga, minecraft:swamp, minecraft:river, minecraft:nether_wastes, minecraft:the_end, minecraft:frozen_ocean, minecraft:frozen_river, minecraft:snowy_tundra, minecraft:snowy_mountains, minecraft:mushroom_fields, minecraft:mushroom_field_shore, minecraft:beach, minecraft:desert_hills, minecraft:wooded_hills, minecraft:taiga_hills, minecraft:mountain_edge, minecraft:jungle, minecraft:jungle_hills, minecraft:jungle_edge, minecraft:deep_ocean, minecraft:stone_shore, minecraft:snowy_beach, minecraft:birch_forest, minecraft:birch_forest_hills, minecraft:dark_forest, minecraft:snowy_taiga, minecraft:snowy_taiga_hills, minecraft:giant_tree_taiga, minecraft:giant_tree_taiga_hills, minecraft:wooded_mountains, minecraft:savanna, minecraft:savanna_plateau, minecraft:badlands, minecraft:wooded_badlands_plateau, minecraft:badlands_plateau, minecraft:small_end_islands, minecraft:end_midlands, minecraft:end_highlands, minecraft:end_barrens, minecraft:warm_ocean, minecraft:lukewarm_ocean, minecraft:cold_ocean, minecraft:deep_warm_ocean, minecraft:deep_lukewarm_ocean, minecraft:deep_cold_ocean, minecraft:deep_frozen_ocean, minecraft:sunflower_plains, minecraft:desert_lakes, minecraft:gravelly_mountains, minecraft:flower_forest, minecraft:taiga_mountains, minecraft:swamp_hills, minecraft:ice_spikes, minecraft:modified_jungle, minecraft:modified_jungle_edge, minecraft:tall_birch_forest, minecraft:tall_birch_hills, minecraft:dark_forest_hills, minecraft:snowy_taiga_mountains, minecraft:giant_spruce_taiga, minecraft:giant_spruce_taiga_hills, minecraft:modified_gravelly_mountains, minecraft:shattered_savanna, minecraft:shattered_savanna_plateau, minecraft:eroded_badlands, minecraft:modified_wooded_badlands_plateau, minecraft:modified_badlands_plateau, minecraft:bamboo_jungle, minecraft:bamboo_jungle_hills, minecraft:soul_sand_valley, minecraft:crimson_forest, minecraft:warped_forest, minecraft:basalt_deltas]"
+

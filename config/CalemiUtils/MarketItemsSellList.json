@@ -1,0 +1,9 @@
+{
+  "TestSellItem": {
+    "index": 0,
+    "stackStr": "minecraft:cobblestone",
+    "stackNBT": "",
+    "amount": 64,
+    "value": 1
+  }
+}
