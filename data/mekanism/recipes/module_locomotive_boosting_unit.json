@@ -1,0 +1,1 @@
+{"type":"minecraft:crafting_shaped","result":{"item":"mekanism:module_locomotive_boosting_unit"},"pattern":["A#A","EPE","HHH"],"key":{"A":{"tag":"forge:alloys/elite"},"P":{"item":"mekanism:module_base"},"#":{"item":"minecraft:diamond_leggings"},"E":{"item":"mekanism:energy_tablet"},"H":{"item":"mekanism:pellet_polonium"}}}

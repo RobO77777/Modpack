@@ -1,0 +1,1 @@
+{"type":"minecraft:crafting_shaped","result":{"item":"mekanism:module_base","count":2},"pattern":["NIN","I#I","NIN"],"key":{"I":{"tag":"forge:ingots/tin"},"N":{"tag":"forge:nuggets/bronze"},"#":{"item":"mekanism:hdpe_sheet"}}}
