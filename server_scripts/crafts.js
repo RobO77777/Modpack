@@ -323,7 +323,25 @@ onEvent('recipes', event => {
 	event.smelting('mekanism:dust_charcoal', '#minecraft:planks')
 
 
+	//immersive
+	//convoyeur
+	event.remove('immersiveengineering:crafting/conveyor_basic')
+	event.shaped('8x immersiveengineering:conveyor_basic', [
+    	'   ',
+   		'CCC',
+  		'SMS'
+  	], {
+    	M: 'calemiutils:motor',
+    	C: 'create:belt_connector',
+    	S: '#forge:ingots/steel',
 
+  	})
+	event.shapeless('8x immersiveengineering:conveyor_dropper', ['8x immersiveengineering:conveyor_basic', 'minecraft:iron_trapdoor'])
+
+	
+	
+	
+	
 	//advanced bullet
 	event.remove({id: 'cgm:advanced_bullet'})
 	event.custom(
