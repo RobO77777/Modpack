@@ -325,7 +325,7 @@ onEvent('recipes', event => {
 
 	//immersive
 	//convoyeur
-	event.remove('immersiveengineering:crafting/conveyor_basic')
+	event.remove({id: 'immersiveengineering:crafting/conveyor_basic'})
 	event.shaped('8x immersiveengineering:conveyor_basic', [
     	'   ',
    		'CCC',
@@ -336,7 +336,7 @@ onEvent('recipes', event => {
     	S: '#forge:ingots/steel',
 
   	})
-	event.shapeless('8x immersiveengineering:conveyor_dropper', ['8x immersiveengineering:conveyor_basic', 'minecraft:iron_trapdoor'])
+
 
 	
 	
