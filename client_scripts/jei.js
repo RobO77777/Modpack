@@ -8,6 +8,8 @@ onEvent('jei.hide.items', event => {
 		'#spartanweaponry:heads'
 	
 	])
+
+	//regex
 	//items cachés
 	event.hide(/buildersinvislights:invisilight/)
 	event.hide(/apotheosis:potion_charm/)
@@ -20,10 +22,10 @@ onEvent('jei.hide.items', event => {
 	event.hide(/explorercraft:sleeping_bag/)
 	event.hide(/chiselsandbits:block_*/)
 	event.hide(/nickel/)
-	event.hide(/electrum/)
 	event.hide(/platinum/)
 	event.hide(/invar/)
 	event.hide(/creative/)
+	event.hide(/electrum/)
 
 	event.hide([
 		'lucky:lucky_sword',
@@ -40,38 +42,12 @@ onEvent('jei.hide.items', event => {
 		'iceandfire:amythest_ore',
 		'iceandfire:amythest_block',
 		'iceandfire:amythest_gem',
-		'immersiveengineering:ore_copper',
-		'immersiveengineering:dust_copper',
-		'immersiveengineering:ingot_copper',
-		'immersiveengineering:storage_copper',
-		'immersiveengineering:nugget_copper',
-		'immersiveengineering:dust_gold',
-		'immersiveengineering:dust_iron',
-		'immersiveengineering:ingot_steel',
-		'immersiveengineering:ingot_lead',
-		'immersiveengineering:nugget_lead',
-		'immersiveengineering:storage_lead',
-		'immersiveengineering:ore_lead',
-		'immersiveengineering:dust_lead',
-		'immersiveengineering:ingot_silver',
-		'immersiveengineering:storage_silver',
-		'immersiveengineering:ore_silver',
-
+		
 
 	])
-	event.hide([
-		['immersiveengineering:ingot_uranium',
-		'immersiveengineering:storage_uranium',
-		'immersiveengineering:slab_storage_uranium',
-		'immersiveengineering:dust_uranium',
-		'immersiveengineering:ore_uranium',
-		'immersiveengineering:nugget_uranium',
-		'immersiveengineering:nugget_steel',
-		'immersiveengineering:stick_iron',
-		'create:copper_sheet',
 
-	]
-])
+
+
 
 
 })
@@ -138,9 +114,9 @@ onEvent('jei.information', event => {
 
 
 	//infos wire
-	event.add(['immersiveengineering:connector_lv', 'immersiveengineering:connector_lv_relay', 'immersiveengineering:connector_mv', 'immersiveengineering:connector_mv_relay', 'immersiveengineering:connector_hv', 'immersiveengineering:connector_hv_relay'], [
-		'Transmits energy over long distances.'
-	])
+	//event.add(['immersiveengineering:connector_lv', 'immersiveengineering:connector_lv_relay', 'immersiveengineering:connector_mv', 'immersiveengineering:connector_mv_relay', 'immersiveengineering:connector_hv', 'immersiveengineering:connector_hv_relay'], [
+	//	'Transmits energy over long distances.'
+	//])
 	event.add(['mekanism:basic_universal_cable', 'mekanism:advanced_universal_cable', 'mekanism:elite_universal_cable', 'mekanism:ultimate_universal_cable'], [
 		'Transmits energy over short distances.'
 	])

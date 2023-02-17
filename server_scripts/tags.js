@@ -23,7 +23,11 @@ onEvent('item.tags', event => {
     event.add('notexture', ['twilightforest:twilight_oak_door', 'twilightforest:canopy_door', 'twilightforest:mangrove_door', 'twilightforest:trans_door', 'twilightforest:sort_door', 'twilightforest:trans_trapdoor', 'twilightforest:mine_door', 'twilightforest:time_door', 'twilightforest:dark_door']);
     //tag magic dust
     event.add('magic_dust', ['minecraft:glowstone_dust', 'botania:pixie_dust']);
-
+    event.add('forge:plates/steel', 'kubejs:steel_sheet')
+    event.add('forge:plates', 'kubejs:silicium_sheet')
+    event.add('forge:plates', 'create:copper_sheet')
+    event.add('forge:plates/copper', 'create:copper_sheet')
+    event.add('forge:wires/steel', 'kubejs:steel_wire')
     //retirer les tags items au blocks de minerais de copper non voulu
     event.removeAllTagsFrom('mekanism:copper_ore')
     event.removeAllTagsFrom('iceandfire:copper_ore')

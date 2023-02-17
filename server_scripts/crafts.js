@@ -22,13 +22,8 @@ onEvent('recipes', event => {
 
 	//ingot
 	//iron
-	event.remove({id: 'immersiveengineering:dust_iron'})
-	event.remove({output: 'immersiveengineering:dust_iron'})
 
-
-	event.remove({id: 'immersiveengineering:crafting/iron_ingot_from_dust'})
 	event.remove({id: 'create:smelting/iron_ingot_from_crushed'})
-	event.remove({id: 'immersiveengineering:crafting/iron_ingot_from_dust_from_blasting'})
 	event.remove({id: 'create:blasting/iron_ingot_from_crushed'})
 	event.remove({id: 'minecraft:iron_ingot_from_blasting'})
 	event.remove({id: 'minecraft:iron_ingot'})
@@ -50,13 +45,7 @@ onEvent('recipes', event => {
 	})
 
 	//gold
-	event.remove({id: 'immersiveengineering:dust_gold'})
-	event.remove({output: 'immersiveengineering:dust_gold'})
-
-
-	event.remove({id: 'immersiveengineering:crafting/gold_ingot_from_dust'})
 	event.remove({id: 'create:smelting/gold_ingot_from_crushed'})
-	event.remove({id: 'immersiveengineering:crafting/gold_ingot_from_dust_from_blasting'})
 	event.remove({id: 'create:blasting/gold_ingot_from_crushed'})
 	event.remove({id: 'minecraft:gold_ingot_from_blasting'})
 	event.remove({id: 'minecraft:gold_ingot'})
@@ -112,28 +101,6 @@ onEvent('recipes', event => {
 
 	//uranium
 
-	event.remove({output: 
-		['immersiveengineering:ingot_uranium',
-		'immersiveengineering:storage_uranium',
-		'immersiveengineering:slab_storage_uranium',
-		'immersiveengineering:dust_uranium',
-		'immersiveengineering:ore_uranium',
-		'immersiveengineering:nugget_uranium',
-
-
-		]
-	})
-	event.remove({id: 
-		['immersiveengineering:ingot_uranium',
-		'immersiveengineering:storage_uranium',
-		'immersiveengineering:slab_storage_uranium',
-		'immersiveengineering:dust_uranium',
-		'immersiveengineering:ore_uranium',
-		'immersiveengineering:nugget_uranium',
-
-
-		]
-	})
 
 	//copper
 	event.remove({id: 'iceandfire:copper_ingot'})
@@ -144,10 +111,7 @@ onEvent('recipes', event => {
 	event.remove({id: 'mekanism:nugget_copper'})
 	event.remove({id: 'mekanism:ore_copper'})
 	event.remove({id: 'mekanism:block_copper'})
-	event.remove({id: 'immersiveengineering:ingot_copper'})
-	event.remove({id: 'immersiveengineering:nugget_copper'})
-	event.remove({id: 'immersiveengineering:ore_copper'})
-	event.remove({id: 'immersiveengineering:storage_copper'})
+
 
 	event.remove({output: 'mekanism:ingot_copper'})
 	event.remove({output: 'iceandfire:copper_ingot'})
@@ -157,10 +121,7 @@ onEvent('recipes', event => {
 	event.remove({output: 'iceandfire:copper_block'})
 	event.remove({output: 'mekanism:ore_copper'})
 	event.remove({output: 'iceandfire:copper_ore'})	
-	event.remove({output: 'immersiveengineering:ingot_copper'})
-	event.remove({output: 'immersiveengineering:nugget_copper'})
-	event.remove({output: 'immersiveengineering:ore_copper'})
-	event.remove({output: 'immersiveengineering:storage_copper'})
+
 
 
 
@@ -249,100 +210,50 @@ onEvent('recipes', event => {
   	})
 
 
-	//silicium
+		//silicium
 
 	event.recipes.mekanismMetallurgicInfusing('kubejs:silicium_dust', '#forge:gems/quartz', 'mekanism:carbon', 50)
 	event.smelting('kubejs:silicium_ingot', 'kubejs:silicium_dust')
 
 
-	//autres crafts
 
-	event.shapeless('minecraft:blaze_rod', ['#forge:rods/all_metal', 'minecraft:blaze_powder', '#magic_dust'])
-	event.recipes.createMixing('minecraft:blaze_rod', ['#forge:rods/all_metal', 'minecraft:blaze_powder', '#magic_dust'])
-	event.shaped('minecraft:charcoal', [
-    	'CCC',
-   		'CCC',
-  		'CCC'
-  	], {
-    	C: 'mekanism:dust_charcoal'
-  	})
-
-	event.shaped('mowziesmobs:earthbore_gauntlet', [
-    	'DJD',
-   		'DRD',
-  		'DGD'
-  	], {
-    	D: 'minecraft:dirt',
-    	G: 'bountifulbaubles:gloves_dexterity',
-    	R: 'botania:rune_earth',
-    	J: 'explorercraft:jade'
-
-  	})
-
-	  event.shaped('mowziesmobs:earth_talisman', [
-    	'JE ',
-   		'ESE',
-  		' ET'
-  	], {
-    	S: 'minecraft:stick',
-    	T: 'botania:terrasteel_ingot',
-    	E: 'botania:life_essence',
-    	J: 'explorercraft:jade'
-
-  	})
-
-
-
-	event.custom(
-		{
-			"type": "botania:runic_altar",
-			"output": {
-			  "item": "bountifulbaubles:bezoar",
-			  "count": 2
-			},
-			"mana": 5200,
-			"ingredients": [
-			  {
-				"item": "create:dough"
-			  },
-			  {
-				"item": 'mowziesmobs:naga_fang'
-			  },
-			  {
-				"item": "botania:mana_diamond"
-			  },
-			  {
-				"item": "minecraft:glowstone_dust"
-			  }
-			]
-		}
-
-	)
 	//crafts fours
 
 	event.smelting('mekanism:dust_charcoal', '#minecraft:planks')
 
 
-	//immersive
-	//convoyeur
-	event.remove({id: 'immersiveengineering:crafting/conveyor_basic'})
-	event.shaped('8x immersiveengineering:conveyor_basic', [
-    	'   ',
-   		'CCC',
-  		'SMS'
+		//electric motor
+
+	event.shaped('kubejs:motor', [
+    	'PRP',
+   		'PWP',
+  		'PMP'
   	], {
-    	M: 'calemiutils:motor',
-    	C: 'create:belt_connector',
-    	S: '#forge:ingots/steel',
+    	M: 'twilightforest:ore_magnet',
+    	P: '#forge:plates/steel',
+    	R: '#forge:rods/iron',
+    	W: 'createaddition:copper_wire'
+
+  	})
+		//craft magnet
+	event.shaped('twilightforest:ore_magnet', [
+    	'M M',
+   		'I I',
+  		'IRI'
+  	], {
+		I: 'minecraft:iron_ingot',
+    	M: 'kubejs:magnetite',
+    	R: 'minecraft:redstone',
 
   	})
 
 
+		//craft magnetite
+	event.recipes.createMixing('kubejs:magnetite', ['mekanism:dust_iron', 'create:zinc_nugget']).superheated()
 	
-	
-	
-	
-	//advanced bullet
+
+	//crafts CGM
+		//advanced bullet
 	event.remove({id: 'cgm:advanced_bullet'})
 	event.custom(
 
@@ -366,7 +277,7 @@ onEvent('recipes', event => {
 	)
 
 
-	//assault_rifle
+		//assault_rifle
 	event.remove({id: 'cgm:assault_rifle'})
 	event.custom(
 
@@ -386,6 +297,10 @@ onEvent('recipes', event => {
 				"count": 1
 			  },
 			  {
+				"item": "create:cogwheel",
+				"count": 1
+			  },
+			  {
 				"tag": "forge:ingots/iron",
 				"count": 6
 			  }
@@ -396,7 +311,7 @@ onEvent('recipes', event => {
 		  }
 		)
 
-	//basic bullet
+		//basic bullet
 	event.remove({id: 'cgm:basic_bullet'})
 	event.custom(
 
@@ -417,7 +332,7 @@ onEvent('recipes', event => {
 			}
 		  }
 		)
-	//bazooka
+		//bazooka
 	event.remove({id: 'cgm:bazooka'})
 	event.custom(
 
@@ -441,6 +356,10 @@ onEvent('recipes', event => {
 				"count": 4
 			  },
 			  {
+				"item": "create:cogwheel",
+				"count": 2
+			  },
+			  {
 				"tag": "forge:dyes/red",
 				"count": 1
 			  }
@@ -450,7 +369,7 @@ onEvent('recipes', event => {
 			}
 		  }
 		)
-	//grenade
+		//grenade
 	event.remove({id: 'cgm:grenade'})
 	event.custom(
 
@@ -479,7 +398,7 @@ onEvent('recipes', event => {
 			}
 		  }
 		)
-	//grenade launcher
+		//grenade launcher
 	event.remove({id: 'cgm:grenade_launcher'})
 	event.custom(
 
@@ -495,6 +414,10 @@ onEvent('recipes', event => {
 				"count": 4
 			  },
 			  {
+				"item": "create:cogwheel",
+				"count": 1
+			  },
+			  {
 				"tag": "forge:wires/steel",
 				"count": 2
 			  }
@@ -504,7 +427,7 @@ onEvent('recipes', event => {
 			}
 		  }
 		)
-	//heavy rifle
+		//heavy rifle
 	event.remove({id: 'cgm:heavy_rifle'})
 	event.custom(
 
@@ -520,6 +443,10 @@ onEvent('recipes', event => {
 				"count": 4
 			  },
 			  {
+				"item": "create:cogwheel",
+				"count": 1
+			  },
+			  {
 				"tag": "forge:wires/steel",
 				"count": 2
 			  }
@@ -529,7 +456,7 @@ onEvent('recipes', event => {
 			}
 		  }
 		)
-	//light grip
+		//light grip
 	event.remove({id: 'cgm:light_grip'})
 	event.custom(
 		{
@@ -553,7 +480,7 @@ onEvent('recipes', event => {
 			}
 		  }
 		)
-	//light stock
+		//light stock
 	event.remove({id: 'cgm:light_stock'})
 	event.custom(
 		{
@@ -577,7 +504,7 @@ onEvent('recipes', event => {
 			}
 		  }
 		)
-	//long scope
+		//long scope
 	event.remove({id: "cgm:long_scope"})
 	event.custom(
 		{
@@ -605,7 +532,7 @@ onEvent('recipes', event => {
 			}
 		  }
 		)
-	//machine pistol
+		//machine pistol
 	event.remove({id: "cgm:machine_pistol"})
 	event.custom(
 		{
@@ -629,7 +556,7 @@ onEvent('recipes', event => {
 			}
 		  }
 		)
-	//medium scope
+		//medium scope
 	event.remove({id: "cgm:medium_scope"})
 	event.custom(
 		{
@@ -674,6 +601,10 @@ onEvent('recipes', event => {
 			  {
 				"tag": "forge:wires/steel",
 				"count": 3
+			  },
+			  {
+				"item": "create:cogwheel",
+				"count": 1
 			  },
 			  {
 				"tag": "forge:plates/steel",
@@ -746,6 +677,10 @@ onEvent('recipes', event => {
 			  {
 				"tag": "forge:wires/steel",
 				"count": 2
+			  },
+			  {
+				"item": "create:cogwheel",
+				"count": 1
 			  },
 			  {
 				"tag": "forge:plates/steel",
@@ -822,6 +757,10 @@ onEvent('recipes', event => {
 			  },
 			  {
 				"tag": "forge:wires/steel",
+				"count": 1
+			  },
+			  {
+				"item": "create:cogwheel",
 				"count": 1
 			  },
 			  {
@@ -993,7 +932,69 @@ onEvent('recipes', event => {
 
 
 
+	//autres crafts
 
+	event.shapeless('minecraft:blaze_rod', ['#forge:rods/all_metal', 'minecraft:blaze_powder', '#magic_dust'])
+	event.recipes.createMixing('minecraft:blaze_rod', ['#forge:rods/all_metal', 'minecraft:blaze_powder', '#magic_dust'])
+	event.shaped('minecraft:charcoal', [
+    	'CCC',
+   		'CCC',
+  		'CCC'
+  	], {
+    	C: 'mekanism:dust_charcoal'
+  	})
+
+	event.shaped('mowziesmobs:earthbore_gauntlet', [
+    	'DJD',
+   		'DRD',
+  		'DGD'
+  	], {
+    	D: 'minecraft:dirt',
+    	G: 'bountifulbaubles:gloves_dexterity',
+    	R: 'botania:rune_earth',
+    	J: 'explorercraft:jade'
+
+  	})
+
+	  event.shaped('mowziesmobs:earth_talisman', [
+    	'JE ',
+   		'ESE',
+  		' ET'
+  	], {
+    	S: 'minecraft:stick',
+    	T: 'botania:terrasteel_ingot',
+    	E: 'botania:life_essence',
+    	J: 'explorercraft:jade'
+
+  	})
+
+
+
+	event.custom(
+		{
+			"type": "botania:runic_altar",
+			"output": {
+			  "item": "bountifulbaubles:bezoar",
+			  "count": 2
+			},
+			"mana": 5200,
+			"ingredients": [
+			  {
+				"item": "create:dough"
+			  },
+			  {
+				"item": 'mowziesmobs:naga_fang'
+			  },
+			  {
+				"item": "botania:mana_diamond"
+			  },
+			  {
+				"item": "minecraft:glowstone_dust"
+			  }
+			]
+		}
+
+	)
 
 
 

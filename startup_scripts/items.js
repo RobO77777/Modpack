@@ -9,10 +9,13 @@ onEvent('item.registry', event => {
 
     event.create('silicium_dust').displayName('Silicium Dust')
     event.create('silicium_ingot').displayName('Silicium Ingot')
-    event.create('silicium_plate').displayName('Silicium Plate')
+    event.create('silicium_sheet').displayName('Silicium sheet')
+    event.create('motor').displayName('Small electric motor')
+    event.create('magnetite').displayName('Magnetite')
 
 
-
+    event.create('steel_sheet').displayName('Steel sheet')
+    event.create('steel_wire').displayName('Steel wire')
     // You can chain builder methods as much as you like
     //event.create('test_item_2').maxStackSize(16).glow(true)
     
