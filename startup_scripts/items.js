@@ -16,9 +16,8 @@ onEvent('item.registry', event => {
 
     event.create('steel_sheet').displayName('Steel sheet')
     event.create('steel_wire').displayName('Steel wire')
-    // You can chain builder methods as much as you like
-    //event.create('test_item_2').maxStackSize(16).glow(true)
-    
-    // You can specify item type as 2nd argument in create(), some types have different available methods
-    //event.create('custom_sword', 'sword').tier('diamond').attackDamageBaseline(10.0)
+    event.create('steel_rod').displayName('Steel rod')
+    //event.create('crushed_steel_ore').displayName('Crushed steel ore')
+
+
   })

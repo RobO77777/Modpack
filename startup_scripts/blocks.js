@@ -2,7 +2,7 @@
 
 console.info('Hello, World! (You will only see this line once in console, during startup)')
 
-
+/*
 onEvent('block.registry', event => {
 	event.create('osmium_casing')
 	.material('stone')
@@ -11,6 +11,7 @@ onEvent('block.registry', event => {
 	.requiresTool(true)
 
 })
+*/
 onEvent('block.registry', event => {
 	event.create('silicium_ore')
 	.material('stone')

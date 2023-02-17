@@ -2,8 +2,6 @@ onEvent('item.tags', event => {
     
     //retirer les tags aux items de copper non voulu
     event.removeAllTagsFrom([
-    'createaddition:copper_wire', 
-    'create:copper_sheet',
     'immersiveengineering:dust_copper', 
     'immersiveengineering:dust_steel', 
     'iceandfire:copper_ingot', 

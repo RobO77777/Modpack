@@ -208,15 +208,56 @@ onEvent('recipes', event => {
     	A: 'mekanism:alloy_infused'
 
   	})
+	
 
 
 		//silicium
 
 	event.recipes.mekanismMetallurgicInfusing('kubejs:silicium_dust', '#forge:gems/quartz', 'mekanism:carbon', 50)
 	event.smelting('kubejs:silicium_ingot', 'kubejs:silicium_dust')
+	event.recipes.createPressing('kubejs:silicium_sheet', 'kubejs:silicium_ingot')
+	
+	event.custom(
+		{
+			"type": "tconstruct:melting",
+			"conditions": [
+			  {
+				"value": {
+				  "tag": "forge:ingots/silicium",
+				  "type": "forge:tag_empty"
+				},
+				"type": "forge:not"
+			  }
+			],
+			"ingredient": {
+			  "tag": "forge:ingots/silicium"
+			},
+			"result": {
+			  "fluid": "tconstruct:molten_silicium",
+			  "amount": 144
+			},
+			"temperature": 950,
+			"time": 65
+		  }
+	)
+	
+	//steel
 
-
-
+	event.recipes.createPressing('kubejs:steel_sheet', '#forge:ingots/steel')
+	
+	event.custom(
+		{
+			"type":"createaddition:rolling",
+			"input": {
+				  "tag": "forge:ingots/steel"
+			},
+			"result": {
+				"item": "kubejs:steel_rod",
+				"count": 2
+			}
+		}
+	)
+	
 	//crafts fours
 
 	event.smelting('mekanism:dust_charcoal', '#minecraft:planks')
@@ -232,7 +273,7 @@ onEvent('recipes', event => {
     	M: 'twilightforest:ore_magnet',
     	P: '#forge:plates/steel',
     	R: '#forge:rods/iron',
-    	W: 'createaddition:copper_wire'
+    	W: 'createaddition:copper_spool'
 
   	})
 		//craft magnet
