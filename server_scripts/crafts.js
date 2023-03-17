@@ -25,6 +25,7 @@ onEvent('recipes', event => {
 	
 
 	//ingot
+	
 	//iron
 
 	event.remove({id: 'create:smelting/iron_ingot_from_crushed'})
