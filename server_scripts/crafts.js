@@ -14,6 +14,10 @@ onEvent('recipes', event => {
 	event.remove({id: 'projecte:collector_mk2'})
 	event.remove({id: 'projecte:collector_mk3'})
 	event.remove({id: 'projecte:transmutation_table'})
+
+	//create
+	event.remove({id: 'quark:building/crafting/rope'})
+	event.remove({id: 'create:crafting/kinetics/rope_pulley'})
 		
 	//mekanism
 
@@ -101,6 +105,27 @@ onEvent('recipes', event => {
 
 	//uranium
 
+	//osmium
+	event.remove({id: 'create:smelting/ingot_osmium_compat_mekanism'})
+	event.remove({id: 'create:blasting/ingot_osmium_compat_mekanism'})
+	event.remove({id: 'mekanism:processing/osmium/ingot/from_ore_smelting'})
+	event.remove({id: 'mekanism:processing/osmium/ingot/from_ore_blasting'})
+
+	event.custom({
+		"type": "create:milling",
+		"ingredients": [
+		  {
+			"item": "create:crushed_osmium_ore"
+		  }
+		],
+		"results": [
+		  {
+			"item": "mekanism:dust_osmium",
+			"chance": 1
+		  }
+		],
+		"processingTime": 50
+	})
 
 	//copper
 	event.remove({id: 'iceandfire:copper_ingot'})
@@ -122,9 +147,37 @@ onEvent('recipes', event => {
 	event.remove({output: 'mekanism:ore_copper'})
 	event.remove({output: 'iceandfire:copper_ore'})	
 
+	//zinc
+	
+	event.remove({id: 'create:smelting/zinc_ingot_from_crushed'})
+	event.remove({id: 'create:blasting/zinc_ingot_from_crushed'})
+	event.remove({id: 'create:smelting/zinc_ingot_from_ore'})
+	event.remove({id: 'create:blasting/zinc_ingot_from_ore'})
+	
+	event.smelting('create:zinc_ingot', 'kubejs:dust_zinc')
+	event.blasting('create:zinc_ingot', 'kubejs:dust_zinc')
 
+	event.custom({
+		"type": "create:milling",
+		"ingredients": [
+		  {
+			"item": "create:crushed_zinc_ore"
+		  }
+		],
+		"results": [
+		  {
+			"item": "kubejs:dust_zinc",
+			"chance": 1
+		  }
+		],
+		"processingTime": 50
+	})
+	//Spartan
 
-
+	event.remove({id: 'spartanweaponry:throwing_knife_gold'})
+	event.remove({id: 'spartanweaponry:throwing_knife_netherite'})
+	event.remove({id: 'spartanweaponry:throwing_knife_diamond'})
+	event.remove({id: 'spartanweaponry:throwing_knife_iron'})
 
 
 
@@ -186,10 +239,43 @@ onEvent('recipes', event => {
 	
 	//craft create
 
+	event.remove({id: 'create:crafting/materials/andesite_alloy'})	
+	event.remove({id: 'create:crafting/materials/andesite_alloy_from_zinc'})	
+	event.remove({id: 'create:mixing/andesite_alloy'})	
+	event.remove({id: 'create:mixing/andesite_alloy_from_zinc'})	
+	
+
+	event.smelting('minecraft:iron_nugget', 'minecraft:iron_ore')
+	event.blasting('minecraft:iron_nugget', 'minecraft:iron_ore')
+	event.smelting('create:copper_nugget', 'create:copper_ore')
+	event.blasting('create:copper_nugget', 'create:copper_ore')
+
+	event.recipes.createMixing('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite']).heated()
+	event.recipes.createMixing('2x create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite', Fluid.of("minecraft:lava", 50)])
+	event.recipes.createMixing('2x kubejs:cement', ['2x minecraft:sand', '2x minecraft:gravel', Fluid.of("minecraft:water", 50)])
+	
 	event.stonecutting('create:cogwheel', 'create:large_cogwheel')
 	event.stonecutting('4x create:shaft', 'create:andesite_alloy')
 	event.stonecutting('create:large_cogwheel', 'create:water_wheel')
 	
+	event.shapeless('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite', 'minecraft:lava_bucket'])
+	event.shapeless('kubejs:cement', ['minecraft:sand', 'minecraft:gravel', 'minecraft:water_bucket'])
+	event.shapeless('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite', Item.of('ceramicbucket:filled_ceramic_bucket', '{Fluid:{FluidName:"minecraft:lava",Amount:1000}}')])
+	event.shapeless('kubejs:cement', ['minecraft:sand', 'minecraft:gravel', Item.of('ceramicbucket:filled_ceramic_bucket', '{Fluid:{FluidName:"minecraft:water",Amount:1000}}')])
+
+	event.shaped('create:rope_pulley', [
+    	' C ',
+   		'SRS',
+  		' I '
+  	], {
+    	C: 'create:andesite_casing',
+    	S: 'create:shaft',
+    	R: 'farmersdelight:rope',
+    	I: 'create:iron_sheet',
+
+
+  	})
+
 
 	//crafts mekanism
 
@@ -211,7 +297,7 @@ onEvent('recipes', event => {
 	
 
 
-		//silicium
+	//silicium
 
 	event.recipes.mekanismMetallurgicInfusing('kubejs:silicium_dust', '#forge:gems/quartz', 'mekanism:carbon', 50)
 	event.smelting('kubejs:silicium_ingot', 'kubejs:silicium_dust')

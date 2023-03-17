@@ -49,13 +49,27 @@ onEvent('item.tags', event => {
     event.add('forge:plates', 'create:copper_sheet')
     event.add('forge:plates/copper', 'create:copper_sheet')
 
+    //zinc
+
+    event.add('forge:dusts/zinc', 'kubejs:dust_zinc')
+
     //retirer les tags items au blocks de minerais de copper non voulu
     event.removeAllTagsFrom('mekanism:copper_ore')
     event.removeAllTagsFrom('iceandfire:copper_ore')
+    event.removeAllTagsFrom(['tconstruct:copper_ore',
+    'tconstruct:tinkers_bronze_nugget',
+    'tconstruct:tinkers_bronze_ingot',
+    'tconstruct:tinkers_bronze_block',
+    'tconstruct:copper_nugget',
+    'tconstruct:copper_block',
+    'tconstruct:copper_ingot'])
 
+    //zinc
+   
+    event.add('forge:dusts', 'kubejs:dust_zinc')
+    //TK
 
-
-
+    event.add('forge:wither_bones', 'iceandfire:witherbone')
 })
 
 //blocks tags

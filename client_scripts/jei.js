@@ -26,6 +26,7 @@ onEvent('jei.hide.items', event => {
 	event.hide(/invar/)
 	event.hide(/creative/)
 	event.hide(/electrum/)
+	event.hide(/ceramic/)
 
 	event.hide([
 		'lucky:lucky_sword',
@@ -42,8 +43,19 @@ onEvent('jei.hide.items', event => {
 		'iceandfire:amythest_ore',
 		'iceandfire:amythest_block',
 		'iceandfire:amythest_gem',
-		
-
+		'tconstruct:copper_ore',
+		'tconstruct:tinkers_bronze_nugget',
+		'tconstruct:tinkers_bronze_ingot',
+		'tconstruct:tinkers_bronze_block',
+		'tconstruct:copper_nugget', 
+		'tconstruct:copper_block',
+		'tconstruct:copper_ingot',
+		'quark:rope',
+		'spartanweaponry:throwing_knife_gold',
+		'spartanweaponry:throwing_knife_netherite',
+		'spartanweaponry:throwing_knife_diamond',
+		'spartanweaponry:throwing_knife_iron',
+		'tconstruct:necrotic_bone',
 	])
 
 
@@ -67,6 +79,11 @@ onEvent('jei.add.items', event => {
 	event.add('spartanweaponry:bolt_spectral')
 	event.add('spartanweaponry:bolt_diamond')
 	event.add('calemiutils:coin_platinum')
+	event.add('ceramicbucket:ceramic_bucket')
+	event.add(Item.of('ceramicbucket:filled_ceramic_bucket', '{Fluid:{FluidName:"minecraft:lava",Amount:1000}}'))
+	event.add(Item.of('ceramicbucket:filled_ceramic_bucket', '{Fluid:{FluidName:"minecraft:water",Amount:1000}}'))
+	event.add('ceramicbucket:unfired_clay_bucket')
+
   })
 
 

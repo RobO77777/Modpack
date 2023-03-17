@@ -17,6 +17,9 @@ onEvent('item.registry', event => {
     event.create('steel_sheet').displayName('Steel sheet')
     event.create('steel_wire').displayName('Steel wire')
     event.create('steel_rod').displayName('Steel rod')
+
+    event.create('dust_zinc').displayName('Zinc Dust')
+    event.create('cement').displayName('Cement')
     //event.create('crushed_steel_ore').displayName('Crushed steel ore')
 
 
