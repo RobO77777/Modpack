@@ -1,10 +1,12 @@
 //fonction milling
 onEvent('recipes', event => {
 
-    function milling(type, ingredients_item, results_item,processingTime, results_chance){
+
+    // Fonction milling
+    function milling(ingredients_item, results_item,processingTime, results_chance){
 
         event.custom({
-            "type": type,
+            "type": "create:milling",
             "ingredients": [
               {
                 "item": ingredients_item
@@ -20,7 +22,7 @@ onEvent('recipes', event => {
         })
     }
 
-
+// milling('minecraft:stripped_jungle_log', 'minecraft:andesite',2.0, 10.0)
 
     
 
