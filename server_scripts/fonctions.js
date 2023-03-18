@@ -28,7 +28,7 @@ onEvent('recipes', event => {
         
     }
 
-
+	//multiSmelt('minecraft:oak_planks', 'minecraft:stone', 2.0 , 1.0 )
 
     
 
