@@ -11,22 +11,25 @@ onEvent('jei.hide.items', event => {
 
 	//regex
 	//items cachés
-	event.hide(/buildersinvislights:invisilight/)
-	event.hide(/apotheosis:potion_charm/)
-	event.hide(/iceandfire:spawn_egg/)
-	event.hide(/spawn_egg/)
-	event.hide(/mekanism:creative_fluid_tank/)
-	event.hide(/mekanism:creative_chemical_tank/)
-	event.hide(/alchemical_bag/)
-	event.hide(/securitycraft:reinforced/)
-	event.hide(/explorercraft:sleeping_bag/)
-	event.hide(/chiselsandbits:block_*/)
-	event.hide(/nickel/)
-	event.hide(/platinum/)
-	event.hide(/invar/)
-	event.hide(/creative/)
-	event.hide(/electrum/)
-	event.hide(/ceramic/)
+	event.hide([
+		/buildersinvislights:invisilight/,
+		/apotheosis:potion_charm/,
+		/iceandfire:spawn_egg/,
+		/spawn_egg/,
+		/mekanism:creative_fluid_tank/,
+		/mekanism:creative_chemical_tank/,
+		/alchemical_bag/,
+		/securitycraft:reinforced/,
+		/explorercraft:sleeping_bag/,
+		/chiselsandbits:block_*/,
+		/nickel/,
+		/platinum/,
+		/invar/,
+		/creative/,
+		/electrum/,
+		/ceramic/,
+	])
+
 
 	event.hide([
 		'lucky:lucky_sword',
@@ -56,6 +59,10 @@ onEvent('jei.hide.items', event => {
 		'spartanweaponry:throwing_knife_diamond',
 		'spartanweaponry:throwing_knife_iron',
 		'tconstruct:necrotic_bone',
+		'tconstruct:part_builder',
+		'tconstruct:tinker_station',
+		'tconstruct:crafting_station',
+		'chiselsandbits:block_bit',
 	])
 
 
@@ -67,23 +74,29 @@ onEvent('jei.hide.items', event => {
 //ajouter des items a jei
 onEvent('jei.add.items', event => {
 
-	event.add('buildersinvislights:invisilight1')
-	event.add('minecraft:chest')
-	event.add(Item.of('chiselsandbits:block_bit', '{blockState:{Name:"minecraft:stone"}}'))
-	event.add(Item.of('apotheosis:potion_charm', '{Damage:0,Potion:"minecraft:night_vision"}'))
-	event.add('projecte:white_alchemical_bag')
-	event.add('explorercraft:sleeping_bag_white')
-	event.add('spartanweaponry:arrow_wood')
-	event.add('spartanweaponry:arrow_diamond')
-	event.add('spartanweaponry:bolt')
-	event.add('spartanweaponry:bolt_spectral')
-	event.add('spartanweaponry:bolt_diamond')
-	event.add('calemiutils:coin_platinum')
-	event.add('ceramicbucket:ceramic_bucket')
-	event.add(Item.of('ceramicbucket:filled_ceramic_bucket', '{Fluid:{FluidName:"minecraft:lava",Amount:1000}}'))
-	event.add(Item.of('ceramicbucket:filled_ceramic_bucket', '{Fluid:{FluidName:"minecraft:water",Amount:1000}}'))
-	event.add('ceramicbucket:unfired_clay_bucket')
+	event.add([
+		
+		'buildersinvislights:invisilight1',
+		'minecraft:chest',
+		'projecte:white_alchemical_bag',
+		'explorercraft:sleeping_bag_white',
+		'spartanweaponry:arrow_wood',
+		'spartanweaponry:arrow_diamond',
+		'spartanweaponry:bolt',
+		'spartanweaponry:bolt_spectral',
+		'spartanweaponry:bolt_diamond',
+		'calemiutils:coin_platinum',
+		'ceramicbucket:ceramic_bucket',
+		'ceramicbucket:unfired_clay_bucket',
+		Item.of('ceramicbucket:filled_ceramic_bucket', '{Fluid:{FluidName:"minecraft:lava",Amount:1000}}'),
+		Item.of('ceramicbucket:filled_ceramic_bucket', '{Fluid:{FluidName:"minecraft:water",Amount:1000}}'),
+		Item.of('chiselsandbits:block_bit', '{blockState:{Name:"minecraft:stone"}}'),
+		Item.of('apotheosis:potion_charm', '{Damage:0,Potion:"minecraft:night_vision"}'),
+		Item.of('tconstruct:part_builder', '{texture:"minecraft:oak_planks"}'),
+		Item.of('tconstruct:tinker_station', '{texture:"minecraft:oak_planks"}'),
+		Item.of('tconstruct:crafting_station', '{texture:"minecraft:oak_log"}'),
 
+	])
   })
 
 

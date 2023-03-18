@@ -1,386 +1,9 @@
 onEvent('recipes', event => {
 
+//mods
 
-
-
-	//craft retirés :
-	
-	//projectE
-	event.remove({id: 'projecte:gem_helmet'})
-	event.remove({id: 'projecte:gem_chestplate'})
-	event.remove({id: 'projecte:gem_boots'})
-	event.remove({id: 'projecte:gem_leggings'})
-	event.remove({id: 'projecte:collector_mk1'})
-	event.remove({id: 'projecte:collector_mk2'})
-	event.remove({id: 'projecte:collector_mk3'})
-	event.remove({id: 'projecte:transmutation_table'})
-
-	//create
-	event.remove({id: 'quark:building/crafting/rope'})
-	event.remove({id: 'create:crafting/kinetics/rope_pulley'})
+	//CGM
 		
-	//mekanism
-
-	event.remove({output: 'mekanismgenerators:wind_generator'})
-	
-
-	//ingot
-	
-	//iron
-
-	event.remove({id: 'create:smelting/iron_ingot_from_crushed'})
-	event.remove({id: 'create:blasting/iron_ingot_from_crushed'})
-	event.remove({id: 'minecraft:iron_ingot_from_blasting'})
-	event.remove({id: 'minecraft:iron_ingot'})
-
-	event.custom({
-		"type": "create:milling",
-		"ingredients": [
-		  {
-			"item": "create:crushed_iron_ore"
-		  }
-		],
-		"results": [
-		  {
-			"item": "mekanism:dust_iron",
-			"chance": 1
-		  }
-		],
-		"processingTime": 50
-	})
-
-	//gold
-	event.remove({id: 'create:smelting/gold_ingot_from_crushed'})
-	event.remove({id: 'create:blasting/gold_ingot_from_crushed'})
-	event.remove({id: 'minecraft:gold_ingot_from_blasting'})
-	event.remove({id: 'minecraft:gold_ingot'})
-
-	event.custom({
-		"type": "create:milling",
-		"ingredients": [
-		  {
-			"item": "create:crushed_gold_ore"
-		  }
-		],
-		"results": [
-		  {
-			"item": "mekanism:dust_gold",
-			"chance": 1
-		  }
-		],
-		"processingTime": 50
-	})
-
-	//copper
-	event.remove({id: 'create:smelting/copper_ingot_from_crushed'})
-	event.remove({id: 'create:blasting/copper_ingot_from_crushed'})
-	event.remove({id: 'create:smelting/copper_ingot_from_ore'})
-	event.remove({id: 'create:blasting/copper_ingot_from_ore'})
-
-	event.smelting('create:copper_ingot', 'mekanism:dust_copper')
-	event.blasting('create:copper_ingot', 'mekanism:dust_copper')
-
-	event.custom({
-		"type": "create:milling",
-		"ingredients": [
-		  {
-			"item": "create:crushed_copper_ore"
-		  }
-		],
-		"results": [
-		  {
-			"item": "mekanism:dust_copper",
-			"chance": 1
-		  }
-		],
-		"processingTime": 50
-	})
-	
-	//améthyste
-
-	event.remove({id: 'iceandfire:amythest_ore'})
-	event.remove({id: 'iceandfire:amythest_block'})	
-	event.remove({id: 'iceandfire:amythest_block_to_gems'})
-	event.remove({id: 'iceandfire:furnace/amythest_blasting'})
-	event.remove({id: 'iceandfire:furnace/amythest'})	
-
-	//uranium
-
-	//osmium
-	event.remove({id: 'create:smelting/ingot_osmium_compat_mekanism'})
-	event.remove({id: 'create:blasting/ingot_osmium_compat_mekanism'})
-	event.remove({id: 'mekanism:processing/osmium/ingot/from_ore_smelting'})
-	event.remove({id: 'mekanism:processing/osmium/ingot/from_ore_blasting'})
-
-	event.custom({
-		"type": "create:milling",
-		"ingredients": [
-		  {
-			"item": "create:crushed_osmium_ore"
-		  }
-		],
-		"results": [
-		  {
-			"item": "mekanism:dust_osmium",
-			"chance": 1
-		  }
-		],
-		"processingTime": 50
-	})
-
-	//copper
-	event.remove({id: 'iceandfire:copper_ingot'})
-	event.remove({id: 'iceandfire:copper_nugget'})
-	event.remove({id: 'iceandfire:copper_ore'})	
-	event.remove({id: 'iceandfire:copper_block'})
-	event.remove({id: 'mekanism:ingot_copper'})
-	event.remove({id: 'mekanism:nugget_copper'})
-	event.remove({id: 'mekanism:ore_copper'})
-	event.remove({id: 'mekanism:block_copper'})
-
-
-	event.remove({output: 'mekanism:ingot_copper'})
-	event.remove({output: 'iceandfire:copper_ingot'})
-	event.remove({output: 'mekanism:nugget_copper'})
-	event.remove({output: 'iceandfire:copper_nugget'})
-	event.remove({output: 'mekanism:block_copper'})
-	event.remove({output: 'iceandfire:copper_block'})
-	event.remove({output: 'mekanism:ore_copper'})
-	event.remove({output: 'iceandfire:copper_ore'})	
-
-	//zinc
-	
-	event.remove({id: 'create:smelting/zinc_ingot_from_crushed'})
-	event.remove({id: 'create:blasting/zinc_ingot_from_crushed'})
-	event.remove({id: 'create:smelting/zinc_ingot_from_ore'})
-	event.remove({id: 'create:blasting/zinc_ingot_from_ore'})
-	
-	event.smelting('create:zinc_ingot', 'kubejs:dust_zinc')
-	event.blasting('create:zinc_ingot', 'kubejs:dust_zinc')
-
-	event.custom({
-		"type": "create:milling",
-		"ingredients": [
-		  {
-			"item": "create:crushed_zinc_ore"
-		  }
-		],
-		"results": [
-		  {
-			"item": "kubejs:dust_zinc",
-			"chance": 1
-		  }
-		],
-		"processingTime": 50
-	})
-	//Spartan
-
-	event.remove({id: 'spartanweaponry:throwing_knife_gold'})
-	event.remove({id: 'spartanweaponry:throwing_knife_netherite'})
-	event.remove({id: 'spartanweaponry:throwing_knife_diamond'})
-	event.remove({id: 'spartanweaponry:throwing_knife_iron'})
-
-
-
-
-	//craft shapless
-	event.shapeless('4x minecraft:cobblestone', ['minecraft:stone', '#forge:dusts/glowstone'])
-
-	
-	//crafts projectE
-	event.shaped('projecte:collector_mk1', [
-    	'SGS',
-   		'SNS',
-  		'SFS'
-  	], {
-    	S: 'minecraft:glowstone',
-    	F: 'projecte:dm_furnace',
-		N: 'minecraft:netherite_block',
-		G: 'minecraft:glass'
-  	})
-	
-	event.shaped('projecte:collector_mk2', [
-    	'BMB',
-   		'BCB',
-  		'BBB'
-  	], {
-    	B: 'projecte:dark_matter_block',
-    	C: 'projecte:collector_mk1',
-		M: 'projecte:dark_matter'
-  	})
-
-	event.shaped('projecte:collector_mk3', [
-    	'BRB',
-   		'BCB',
-  		'BBB'
-  	], {
-    	B: 'projecte:red_matter_block',
-    	C: 'projecte:collector_mk2',
-		R: 'projecte:red_matter'
-  	})
-
-	event.shaped('projecte:transmutation_table', [
-    	'ONO',
-   		'NSN',
-  		'ONO'
-  	], {
-    	O: 'minecraft:obsidian',
-    	N: 'minecraft:netherite_ingot',
-		S: 'projecte:philosophers_stone'
-  	})
-
-	event.shaped('minecraft:charcoal', [
-    	'SWW',
-   		'WWW',
-  		'WWW'
-  	], {
-    	S: 'projecte:philosophers_stone',
-    	W: '#minecraft:logs'
-  	})
-	
-	//craft create
-
-	event.remove({id: 'create:crafting/materials/andesite_alloy'})	
-	event.remove({id: 'create:crafting/materials/andesite_alloy_from_zinc'})	
-	event.remove({id: 'create:mixing/andesite_alloy'})	
-	event.remove({id: 'create:mixing/andesite_alloy_from_zinc'})	
-	
-
-	event.smelting('minecraft:iron_nugget', 'minecraft:iron_ore')
-	event.blasting('minecraft:iron_nugget', 'minecraft:iron_ore')
-	event.smelting('create:copper_nugget', 'create:copper_ore')
-	event.blasting('create:copper_nugget', 'create:copper_ore')
-
-	event.recipes.createMixing('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite']).heated()
-	event.recipes.createMixing('2x create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite', Fluid.of("minecraft:lava", 50)])
-	event.recipes.createMixing('2x kubejs:cement', ['2x minecraft:sand', '2x minecraft:gravel', Fluid.of("minecraft:water", 50)])
-	
-	event.stonecutting('create:cogwheel', 'create:large_cogwheel')
-	event.stonecutting('4x create:shaft', 'create:andesite_alloy')
-	event.stonecutting('create:large_cogwheel', 'create:water_wheel')
-	
-	event.shapeless('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite', 'minecraft:lava_bucket'])
-	event.shapeless('kubejs:cement', ['minecraft:sand', 'minecraft:gravel', 'minecraft:water_bucket'])
-	event.shapeless('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite', Item.of('ceramicbucket:filled_ceramic_bucket', '{Fluid:{FluidName:"minecraft:lava",Amount:1000}}')])
-	event.shapeless('kubejs:cement', ['minecraft:sand', 'minecraft:gravel', Item.of('ceramicbucket:filled_ceramic_bucket', '{Fluid:{FluidName:"minecraft:water",Amount:1000}}')])
-
-	event.shaped('create:rope_pulley', [
-    	' C ',
-   		'SRS',
-  		' I '
-  	], {
-    	C: 'create:andesite_casing',
-    	S: 'create:shaft',
-    	R: 'farmersdelight:rope',
-    	I: 'create:iron_sheet',
-
-
-  	})
-
-
-	//crafts mekanism
-
-	event.recipes.createCrushing('mekanism:dust_copper', ['create:copper_ingot'])
-	event.recipes.createMixing('mekanism:dust_bronze', ['mekanism:dust_copper', 'mekanism:dust_tin']).superheated()
-	event.recipes.createMixing('mekanism:dust_steel', ['mekanism:dust_coal', 'mekanism:dust_iron']).superheated()
-	event.shaped('mekanismgenerators:wind_generator', [
-    	' P ',
-   		'OAO',
-  		'TCT'
-  	], {
-    	P: 'create:propeller',
-    	O: 'mekanism:ingot_osmium',
-    	T: 'mekanism:energy_tablet',
-    	C: 'mekanism:basic_control_circuit',
-    	A: 'mekanism:alloy_infused'
-
-  	})
-	
-
-
-	//silicium
-
-	event.recipes.mekanismMetallurgicInfusing('kubejs:silicium_dust', '#forge:gems/quartz', 'mekanism:carbon', 50)
-	event.smelting('kubejs:silicium_ingot', 'kubejs:silicium_dust')
-	event.recipes.createPressing('kubejs:silicium_sheet', 'kubejs:silicium_ingot')
-	
-	event.custom(
-		{
-			"type": "tconstruct:melting",
-			"conditions": [
-			  {
-				"value": {
-				  "tag": "forge:ingots/silicium",
-				  "type": "forge:tag_empty"
-				},
-				"type": "forge:not"
-			  }
-			],
-			"ingredient": {
-			  "tag": "forge:ingots/silicium"
-			},
-			"result": {
-			  "fluid": "tconstruct:molten_silicium",
-			  "amount": 144
-			},
-			"temperature": 950,
-			"time": 65
-		  }
-	)
-	
-	//steel
-
-	event.recipes.createPressing('kubejs:steel_sheet', '#forge:ingots/steel')
-	
-	event.custom(
-		{
-			"type":"createaddition:rolling",
-			"input": {
-				  "tag": "forge:ingots/steel"
-			},
-			"result": {
-				"item": "kubejs:steel_rod",
-				"count": 2
-			}
-		}
-	)
-	
-	//crafts fours
-
-	event.smelting('mekanism:dust_charcoal', '#minecraft:planks')
-
-
-		//electric motor
-
-	event.shaped('kubejs:motor', [
-    	'PRP',
-   		'PWP',
-  		'PMP'
-  	], {
-    	M: 'twilightforest:ore_magnet',
-    	P: '#forge:plates/steel',
-    	R: '#forge:rods/iron',
-    	W: 'createaddition:copper_spool'
-
-  	})
-		//craft magnet
-	event.shaped('twilightforest:ore_magnet', [
-    	'M M',
-   		'I I',
-  		'IRI'
-  	], {
-		I: 'minecraft:iron_ingot',
-    	M: 'kubejs:magnetite',
-    	R: 'minecraft:redstone',
-
-  	})
-
-
-		//craft magnetite
-	event.recipes.createMixing('kubejs:magnetite', ['mekanism:dust_iron', 'create:zinc_nugget']).superheated()
-	
-
-	//crafts CGM
 		//advanced bullet
 	event.remove({id: 'cgm:advanced_bullet'})
 	event.custom(
@@ -1060,8 +683,377 @@ onEvent('recipes', event => {
 
 
 
-	//autres crafts
+	//projectE
 
+	event.remove({id: 'projecte:gem_helmet'})
+	event.remove({id: 'projecte:gem_chestplate'})
+	event.remove({id: 'projecte:gem_boots'})
+	event.remove({id: 'projecte:gem_leggings'})
+	event.remove({id: 'projecte:collector_mk1'})
+	event.remove({id: 'projecte:collector_mk2'})
+	event.remove({id: 'projecte:collector_mk3'})
+	event.remove({id: 'projecte:transmutation_table'})
+
+	//create
+
+	event.remove({id: 'quark:building/crafting/rope'})
+	event.remove({id: 'create:crafting/kinetics/rope_pulley'})
+	event.remove({id: 'create:crafting/materials/andesite_alloy'})	
+	event.remove({id: 'create:crafting/materials/andesite_alloy_from_zinc'})	
+	event.remove({id: 'create:mixing/andesite_alloy'})	
+	event.remove({id: 'create:mixing/andesite_alloy_from_zinc'})	
+	
+
+	event.smelting('minecraft:iron_nugget', 'minecraft:iron_ore')
+	event.blasting('minecraft:iron_nugget', 'minecraft:iron_ore')
+	event.smelting('create:copper_nugget', 'create:copper_ore')
+	event.blasting('create:copper_nugget', 'create:copper_ore')
+
+	event.recipes.createMixing('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite']).heated()
+	event.recipes.createMixing('2x create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite', Fluid.of("minecraft:lava", 50)])
+	event.recipes.createMixing('2x kubejs:cement', ['2x minecraft:sand', '2x minecraft:gravel', Fluid.of("minecraft:water", 50)])
+	
+	event.stonecutting('create:cogwheel', 'create:large_cogwheel')
+	event.stonecutting('4x create:shaft', 'create:andesite_alloy')
+	event.stonecutting('create:large_cogwheel', 'create:water_wheel')
+	
+	event.shapeless('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite', 'minecraft:lava_bucket'])
+	event.shapeless('kubejs:cement', ['minecraft:sand', 'minecraft:gravel', 'minecraft:water_bucket'])
+	event.shapeless('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite', Item.of('ceramicbucket:filled_ceramic_bucket', '{Fluid:{FluidName:"minecraft:lava",Amount:1000}}')])
+	event.shapeless('kubejs:cement', ['minecraft:sand', 'minecraft:gravel', Item.of('ceramicbucket:filled_ceramic_bucket', '{Fluid:{FluidName:"minecraft:water",Amount:1000}}')])
+
+	event.shaped('create:rope_pulley', [
+    	' C ',
+   		'SRS',
+  		' I '
+  	], {
+    	C: 'create:andesite_casing',
+    	S: 'create:shaft',
+    	R: 'farmersdelight:rope',
+    	I: 'create:iron_sheet',
+
+
+  	})
+
+	//mekanism
+
+	event.remove({output: 'mekanismgenerators:wind_generator'})
+
+	event.recipes.createCrushing('mekanism:dust_copper', ['create:copper_ingot'])
+	event.recipes.createMixing('mekanism:dust_bronze', ['mekanism:dust_copper', 'mekanism:dust_tin']).superheated()
+	event.recipes.createMixing('mekanism:dust_steel', ['mekanism:dust_coal', 'mekanism:dust_iron']).superheated()
+	event.shaped('mekanismgenerators:wind_generator', [
+    	' P ',
+   		'OAO',
+  		'TCT'
+  	], {
+    	P: 'create:propeller',
+    	O: 'mekanism:ingot_osmium',
+    	T: 'mekanism:energy_tablet',
+    	C: 'mekanism:basic_control_circuit',
+    	A: 'mekanism:alloy_infused'
+
+  	})
+	
+
+	
+	//Spartan
+
+	event.remove({id: 'spartanweaponry:throwing_knife_gold'})
+	event.remove({id: 'spartanweaponry:throwing_knife_netherite'})
+	event.remove({id: 'spartanweaponry:throwing_knife_diamond'})
+	event.remove({id: 'spartanweaponry:throwing_knife_iron'})
+
+	//projectE
+	event.shaped('projecte:collector_mk1', [
+    	'SGS',
+   		'SNS',
+  		'SFS'
+  	], {
+    	S: 'minecraft:glowstone',
+    	F: 'projecte:dm_furnace',
+		N: 'minecraft:netherite_block',
+		G: 'minecraft:glass'
+  	})
+	
+	event.shaped('projecte:collector_mk2', [
+    	'BMB',
+   		'BCB',
+  		'BBB'
+  	], {
+    	B: 'projecte:dark_matter_block',
+    	C: 'projecte:collector_mk1',
+		M: 'projecte:dark_matter'
+  	})
+
+	event.shaped('projecte:collector_mk3', [
+    	'BRB',
+   		'BCB',
+  		'BBB'
+  	], {
+    	B: 'projecte:red_matter_block',
+    	C: 'projecte:collector_mk2',
+		R: 'projecte:red_matter'
+  	})
+
+	event.shaped('projecte:transmutation_table', [
+    	'ONO',
+   		'NSN',
+  		'ONO'
+  	], {
+    	O: 'minecraft:obsidian',
+    	N: 'minecraft:netherite_ingot',
+		S: 'projecte:philosophers_stone'
+  	})
+
+	event.shaped('minecraft:charcoal', [
+    	'SWW',
+   		'WWW',
+  		'WWW'
+  	], {
+    	S: 'projecte:philosophers_stone',
+    	W: '#minecraft:logs'
+  	})
+	
+	//Vanilla
+
+	event.shapeless('4x minecraft:cobblestone', ['minecraft:stone', '#forge:dusts/glowstone'])
+	event.smelting('mekanism:dust_charcoal', '#minecraft:planks')
+
+	//Kubejs
+
+		//electric motor
+
+	event.shaped('kubejs:motor', [
+    	'PRP',
+   		'PWP',
+  		'PMP'
+  	], {
+    	M: 'twilightforest:ore_magnet',
+    	P: '#forge:plates/steel',
+    	R: '#forge:rods/iron',
+    	W: 'createaddition:copper_spool'
+
+  	})
+		//craft magnet
+	event.shaped('twilightforest:ore_magnet', [
+    	'M M',
+   		'I I',
+  		'IRI'
+  	], {
+		I: 'minecraft:iron_ingot',
+    	M: 'kubejs:magnetite',
+    	R: 'minecraft:redstone',
+
+  	})
+
+
+		//craft magnetite
+	event.recipes.createMixing('kubejs:magnetite', ['mekanism:dust_iron', 'create:zinc_nugget']).superheated()
+	
+
+//ingots
+	
+	//iron
+
+	event.remove({id: 'create:smelting/iron_ingot_from_crushed'})
+	event.remove({id: 'create:blasting/iron_ingot_from_crushed'})
+	event.remove({id: 'minecraft:iron_ingot_from_blasting'})
+	event.remove({id: 'minecraft:iron_ingot'})
+
+	event.custom({
+		"type": "create:milling",
+		"ingredients": [
+		  {
+			"item": "create:crushed_iron_ore"
+		  }
+		],
+		"results": [
+		  {
+			"item": "mekanism:dust_iron",
+			"chance": 1
+		  }
+		],
+		"processingTime": 50
+	})
+
+	//gold
+	event.remove({id: 'create:smelting/gold_ingot_from_crushed'})
+	event.remove({id: 'create:blasting/gold_ingot_from_crushed'})
+	event.remove({id: 'minecraft:gold_ingot_from_blasting'})
+	event.remove({id: 'minecraft:gold_ingot'})
+
+	event.custom({
+		"type": "create:milling",
+		"ingredients": [
+		  {
+			"item": "create:crushed_gold_ore"
+		  }
+		],
+		"results": [
+		  {
+			"item": "mekanism:dust_gold",
+			"chance": 1
+		  }
+		],
+		"processingTime": 50
+	})
+
+	//copper
+	event.remove({id: 'create:smelting/copper_ingot_from_crushed'})
+	event.remove({id: 'create:blasting/copper_ingot_from_crushed'})
+	event.remove({id: 'create:smelting/copper_ingot_from_ore'})
+	event.remove({id: 'create:blasting/copper_ingot_from_ore'})
+
+	event.smelting('create:copper_ingot', 'mekanism:dust_copper')
+	event.blasting('create:copper_ingot', 'mekanism:dust_copper')
+
+	event.custom({
+		"type": "create:milling",
+		"ingredients": [
+		  {
+			"item": "create:crushed_copper_ore"
+		  }
+		],
+		"results": [
+		  {
+			"item": "mekanism:dust_copper",
+			"chance": 1
+		  }
+		],
+		"processingTime": 50
+	})
+	
+	event.remove({id: 'iceandfire:copper_ingot'})
+	event.remove({id: 'iceandfire:copper_nugget'})
+	event.remove({id: 'iceandfire:copper_ore'})	
+	event.remove({id: 'iceandfire:copper_block'})
+	event.remove({id: 'mekanism:ingot_copper'})
+	event.remove({id: 'mekanism:nugget_copper'})
+	event.remove({id: 'mekanism:ore_copper'})
+	event.remove({id: 'mekanism:block_copper'})
+
+
+	event.remove({output: 'mekanism:ingot_copper'})
+	event.remove({output: 'iceandfire:copper_ingot'})
+	event.remove({output: 'mekanism:nugget_copper'})
+	event.remove({output: 'iceandfire:copper_nugget'})
+	event.remove({output: 'mekanism:block_copper'})
+	event.remove({output: 'iceandfire:copper_block'})
+	event.remove({output: 'mekanism:ore_copper'})
+	event.remove({output: 'iceandfire:copper_ore'})	
+
+	//améthyste
+
+	event.remove({id: 'iceandfire:amythest_ore'})
+	event.remove({id: 'iceandfire:amythest_block'})	
+	event.remove({id: 'iceandfire:amythest_block_to_gems'})
+	event.remove({id: 'iceandfire:furnace/amythest_blasting'})
+	event.remove({id: 'iceandfire:furnace/amythest'})	
+
+	//uranium
+
+	//osmium
+	event.remove({id: 'create:smelting/ingot_osmium_compat_mekanism'})
+	event.remove({id: 'create:blasting/ingot_osmium_compat_mekanism'})
+	event.remove({id: 'mekanism:processing/osmium/ingot/from_ore_smelting'})
+	event.remove({id: 'mekanism:processing/osmium/ingot/from_ore_blasting'})
+
+	event.custom({
+		"type": "create:milling",
+		"ingredients": [
+		  {
+			"item": "create:crushed_osmium_ore"
+		  }
+		],
+		"results": [
+		  {
+			"item": "mekanism:dust_osmium",
+			"chance": 1
+		  }
+		],
+		"processingTime": 50
+	})
+
+	//zinc
+	
+	event.remove({id: 'create:smelting/zinc_ingot_from_crushed'})
+	event.remove({id: 'create:blasting/zinc_ingot_from_crushed'})
+	event.remove({id: 'create:smelting/zinc_ingot_from_ore'})
+	event.remove({id: 'create:blasting/zinc_ingot_from_ore'})
+	
+	event.smelting('create:zinc_ingot', 'kubejs:dust_zinc')
+	event.blasting('create:zinc_ingot', 'kubejs:dust_zinc')
+
+	event.custom({
+		"type": "create:milling",
+		"ingredients": [
+		  {
+			"item": "create:crushed_zinc_ore"
+		  }
+		],
+		"results": [
+		  {
+			"item": "kubejs:dust_zinc",
+			"chance": 1
+		  }
+		],
+		"processingTime": 50
+	})
+
+
+
+
+	//silicium
+
+	event.recipes.mekanismMetallurgicInfusing('kubejs:silicium_dust', '#forge:gems/quartz', 'mekanism:carbon', 50)
+	event.smelting('kubejs:silicium_ingot', 'kubejs:silicium_dust')
+	event.recipes.createPressing('kubejs:silicium_sheet', 'kubejs:silicium_ingot')
+	
+	event.custom(
+		{
+			"type": "tconstruct:melting",
+			"conditions": [
+			  {
+				"value": {
+				  "tag": "forge:ingots/silicium",
+				  "type": "forge:tag_empty"
+				},
+				"type": "forge:not"
+			  }
+			],
+			"ingredient": {
+			  "tag": "forge:ingots/silicium"
+			},
+			"result": {
+			  "fluid": "tconstruct:molten_silicium",
+			  "amount": 144
+			},
+			"temperature": 950,
+			"time": 65
+		  }
+	)
+	
+	//steel
+
+	event.recipes.createPressing('kubejs:steel_sheet', '#forge:ingots/steel')
+	
+	event.custom(
+		{
+			"type":"createaddition:rolling",
+			"input": {
+				  "tag": "forge:ingots/steel"
+			},
+			"result": {
+				"item": "kubejs:steel_rod",
+				"count": 2
+			}
+		}
+	)
+	
+
+
+//Autres crafts
 	event.shapeless('minecraft:blaze_rod', ['#forge:rods/all_metal', 'minecraft:blaze_powder', '#magic_dust'])
 	event.recipes.createMixing('minecraft:blaze_rod', ['#forge:rods/all_metal', 'minecraft:blaze_powder', '#magic_dust'])
 	event.shaped('minecraft:charcoal', [
