@@ -12,11 +12,4 @@ onEvent('block.registry', event => {
 
 })
 */
-onEvent('block.registry', event => {
-	event.create('silicium_ore')
-	.material('stone')
-	.hardness(4)
-	.harvestTool('pickaxe', 1)
-	.requiresTool(true)
 
-})
