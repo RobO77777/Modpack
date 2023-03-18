@@ -1,4 +1,4 @@
-//fonction multi smelt
+//fonction milling
 onEvent('recipes', event => {
 
     function milling(type, ingredients_item, results_item,processingTime, results_chance){
