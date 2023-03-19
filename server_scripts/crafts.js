@@ -1116,7 +1116,36 @@ onEvent('recipes', event => {
 
 	)
 
-
+/*	event.custom({
+		"type": "extendedcrafting:shaped_table",
+		"pattern": [
+		  "DLLLLLD",
+		  "DGINIGD",
+		  "DGINIGD",
+		  "DLLLLLD"
+		],
+		"key": {
+		  "D": {
+			"tag": "forge:gems/diamond"
+		  },
+		  "L": {
+			"tag": "forge:gems/lapis"
+		  },
+		  "N": {
+			"item": "minecraft:nether_star"
+		  },
+		  "I": {
+			"tag": "forge:ingots/iron"
+		  },
+		  "G": {
+			"tag": "forge:ingots/gold"
+		  }
+		},
+		"result": {
+		  "item": "extendedcrafting:crystaltine_ingot",
+		  "count": 4
+		}
+	  }) */
 
 
 })
