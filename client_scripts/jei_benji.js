@@ -20,7 +20,7 @@ onEvent('jei.add.items', event => {
     'extendedcrafting:basic_table',
     'extendedcrafting:advanced_table',
     'extendedcrafting:elite_table',
-    'extendedcrafting:ultimate_table',
+    'extendedcrafting:ultimate_table'
 
 	])
   })
