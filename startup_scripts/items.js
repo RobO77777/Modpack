@@ -20,6 +20,14 @@ onEvent('item.registry', event => {
 
     event.create('dust_zinc').displayName('Zinc Dust')
     event.create('cement').displayName('Cement')
+
+    //items ordi
+    event.create('ram').displayName('Basic Ram')
+    event.create('electronic_card').displayName('Basic Electronic Card')
+    event.create('hard_disk').displayName('Basic Hard Disk')
+    event.create('processor').displayName('Basic Processor')
+    event.create('video_card').displayName('Basic Video Card')
+    
     //event.create('crushed_steel_ore').displayName('Crushed steel ore')
 
 
