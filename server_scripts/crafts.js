@@ -763,6 +763,59 @@ onEvent('recipes', event => {
 	event.remove({id: 'spartanweaponry:throwing_knife_netherite'})
 	event.remove({id: 'spartanweaponry:throwing_knife_diamond'})
 	event.remove({id: 'spartanweaponry:throwing_knife_iron'})
+	
+	//Extended crafting
+
+	event.remove({id: /extendedcrafting:/})
+	event.shaped('extendedcrafting:basic_table', [
+    	'IBI',
+   		'BCB',
+  		'ISI'
+  	], {
+    	C: 'minecraft:crafting_table',
+    	B: 'mekanism:basic_control_circuit',
+		S: 'mekanism:steel_casing',
+		I: 'mekanism:ingot_steel',
+
+  	})
+	event.shaped('extendedcrafting:advanced_table', [
+    	'IBI',
+   		'BCB',
+  		'ISI'
+  	], {
+    	C: 'extendedcrafting:basic_table',
+    	B: 'mekanism:advanced_control_circuit',
+		S: 'mekanism:alloy_infused',
+		I: 'mekanism:ingot_steel',
+
+  	})
+	event.shaped('extendedcrafting:elite_table', [
+    	'IBI',
+   		'BCB',
+  		'ISI'
+  	], {
+    	C: 'extendedcrafting:advanced_table',
+    	B: 'mekanism:elite_control_circuit',
+		S: 'mekanism:alloy_reinforced',
+		I: 'mekanism:ingot_steel',
+
+  	})
+	event.shaped('extendedcrafting:ultimate_table', [
+    	'IBI',
+   		'BCB',
+  		'ISI'
+  	], {
+    	C: 'extendedcrafting:elite_table',
+    	B: 'mekanism:ultimate_control_circuit',
+		S: 'mekanism:alloy_atomic',
+		I: 'mekanism:ingot_steel',
+
+  	})
+	  
+	event.shapeless('extendedcrafting:basic_auto_table', ['mekanism:dictionary', 'mekanism:basic_energy_cube', 'extendedcrafting:basic_table'])
+	event.shapeless('extendedcrafting:advanced_auto_table', ['mekanism:dictionary', 'mekanism:advanced_energy_cube', 'extendedcrafting:advanced_table'])
+	event.shapeless('extendedcrafting:elite_auto_table', ['mekanism:dictionary', 'mekanism:elite_energy_cube', 'extendedcrafting:elite_table'])
+	event.shapeless('extendedcrafting:ultimate_auto_table', ['mekanism:dictionary', 'mekanism:ultimate_energy_cube', 'extendedcrafting:ultimate_table'])
 
 	//projectE
 	event.shaped('projecte:collector_mk1', [
