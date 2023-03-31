@@ -28,6 +28,11 @@ onEvent('jei.hide.items', event => {
 		/creative/,
 		/electrum/,
 		/ceramic/,
+		//Items filters
+		/itemfilters/,
+		/ftbquests/,
+		/ftblibrary/,
+
 	])
 
 

@@ -710,8 +710,8 @@ onEvent('recipes', event => {
 	event.blasting('create:copper_nugget', 'create:copper_ore')
 
 	event.recipes.createMixing('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite']).heated()
-	event.recipes.createMixing('2x create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite', Fluid.of("minecraft:lava", 50)])
-	event.recipes.createMixing('2x kubejs:cement', ['2x minecraft:sand', '2x minecraft:gravel', Fluid.of("minecraft:water", 50)])
+	event.recipes.createMixing('2x create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite', Fluid.of("minecraft:lava", 100)])
+	event.recipes.createMixing('2x kubejs:cement', ['2x minecraft:sand', '2x minecraft:gravel', Fluid.of("minecraft:water", 100)])
 	
 	event.stonecutting('create:cogwheel', 'create:large_cogwheel')
 	event.stonecutting('4x create:shaft', 'create:andesite_alloy')
@@ -1168,6 +1168,117 @@ onEvent('recipes', event => {
 		}
 
 	)
+
+	//crafts transistors
+	event.shaped('kubejs:transistor', [
+    	' P ',
+   		' S ',
+  		' C '
+  	], {
+    	P: 'mekanism:hdpe_pellet',
+    	S: 'kubejs:silicium_dust',
+    	C: 'createaddition:copper_wire',
+
+
+  	})
+
+	event.custom({
+		"type": "extendedcrafting:shaped_table",
+		"pattern": [
+		  " PPP ",
+		  " SSS ",
+		  "  A  ",
+		  " C C ",
+		  " C C "
+		],
+		"key": {
+		  "A": {
+			"item": 'mekanism:alloy_infused' 
+		  },
+		  "P": {
+			"item": 'mekanism:hdpe_pellet'
+		  },
+		  "S": {
+			"item": 'kubejs:silicium_dust'
+		  },
+		  "C": {
+			"item": 'createaddition:copper_wire'
+		  }
+		},
+		"result": {
+		  "item": "kubejs:transistor_advanced",
+		  "count": 1
+		}
+	  }) 
+	event.custom({
+		"type": "extendedcrafting:shaped_table",
+		"pattern": [
+		  " PPPPP ",
+		  " PSSSP ",
+		  " PSSSP ",
+		  " PAAAP ",
+		  "  C C  ",
+		  "  C C  ",
+		  "  C C  "
+		],
+		"key": {
+		  "A": {
+			"item": 'mekanism:alloy_reinforced'
+		  },
+		  "P": {
+			"item": 'mekanism:hdpe_pellet'
+		  },
+		  "S": {
+			"item": 'kubejs:silicium_dust'
+		  },
+		  "C": {
+			"item": 'createaddition:copper_wire'
+		  }
+		},
+		"result": {
+		  "item": "kubejs:transistor_elite",
+		  "count": 1
+		}
+	  }) 
+	event.custom({
+		"type": "extendedcrafting:shaped_table",
+		"pattern": [
+		  " PPPPPPP ",
+		  " PSSSSSP ",
+		  " PSSSSSP ",
+		  " PSAAASP ",
+		  " PSAAASP ",
+		  "  C   C  ",
+		  "  C   C  ",
+		  "  C   C  ",
+		  "  C   C  "
+		],
+		"key": {
+		  "A": {
+			"item": 'mekanism:alloy_atomic'
+		  },
+		  "P": {
+			"item": 'mekanism:hdpe_pellet'
+		  },
+		  "S": {
+			"item": 'kubejs:silicium_dust'
+		  },
+		  "C": {
+			"item": 'createaddition:copper_wire'
+		  }
+		},
+		"result": {
+		  "item": 'kubejs:transistor_ultimate',
+		  "count": 1
+		}
+	  }) 
+
+
+
+
+	//Items filters
+	event.remove({id: /itemfilters/})
+
 
 /*	event.custom({
 		"type": "extendedcrafting:shaped_table",
