@@ -702,6 +702,7 @@ onEvent('recipes', event => {
 	event.remove({id: 'create:crafting/materials/andesite_alloy_from_zinc'})	
 	event.remove({id: 'create:mixing/andesite_alloy'})	
 	event.remove({id: 'create:mixing/andesite_alloy_from_zinc'})	
+	event.remove({id: 'create:crafting/materials/andesite_casing'})	
 	
 
 	event.smelting('minecraft:iron_nugget', 'minecraft:iron_ore')
@@ -710,8 +711,8 @@ onEvent('recipes', event => {
 	event.blasting('create:copper_nugget', 'create:copper_ore')
 
 	event.recipes.createMixing('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite']).heated()
-	event.recipes.createMixing('2x create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite', Fluid.of("minecraft:lava", 100)])
-	event.recipes.createMixing('2x kubejs:cement', ['2x minecraft:sand', '2x minecraft:gravel', Fluid.of("minecraft:water", 100)])
+	event.recipes.createMixing('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite', Fluid.of("minecraft:lava", 100)])
+	event.recipes.createMixing('2x kubejs:cement', ['2x minecraft:sand', '2x minecraft:gravel', Fluid.of("minecraft:water", 1000)])
 	
 	event.stonecutting('create:cogwheel', 'create:large_cogwheel')
 	event.stonecutting('4x create:shaft', 'create:andesite_alloy')
@@ -731,6 +732,18 @@ onEvent('recipes', event => {
     	S: 'create:shaft',
     	R: 'farmersdelight:rope',
     	I: 'create:iron_sheet',
+
+
+  	})
+	event.shaped('create:andesite_casing', [
+    	'PPP',
+   		'ALA',
+  		'PPP'
+  	], {
+    	P: '#minecraft:planks',
+    	L: '#minecraft:logs',
+    	A: 'create:andesite_alloy',
+
 
 
   	})
