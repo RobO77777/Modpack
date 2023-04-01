@@ -68,6 +68,7 @@ onEvent('jei.hide.items', event => {
 		'tconstruct:tinker_station',
 		'tconstruct:crafting_station',
 		'chiselsandbits:block_bit',
+		'iceandfire:bestiary',
 	])
 
 
@@ -100,6 +101,7 @@ onEvent('jei.add.items', event => {
 		Item.of('tconstruct:part_builder', '{texture:"minecraft:oak_planks"}'),
 		Item.of('tconstruct:tinker_station', '{texture:"minecraft:oak_planks"}'),
 		Item.of('tconstruct:crafting_station', '{texture:"minecraft:oak_log"}'),
+
 
 	])
   })

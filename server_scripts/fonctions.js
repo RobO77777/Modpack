@@ -30,8 +30,15 @@ onEvent('recipes', event => {
 
 	//multiSmelt('minecraft:oak_planks', 'minecraft:stone', 2.0 , 1.0 )
 
-    
+    function tinkerCasting(input, qte, output, cast, consume, time) {
+        e.custom({ "type": "tconstruct:casting_table", "cast": { "tag": cast }, "cast_consumed": consume, "fluid": { "name": input, "amount": qte }, "result": output, "cooling_time": time })
+    }
 
+    function tinkerCastingBasin(input, qte, output, time) {
+        e.custom({ "type": "tconstruct:casting_basin", "fluid": { "name": input, "amount": qte }, "result": { "item": output }, "cooling_time": time })
+
+
+    }
 
 
 })

@@ -7,9 +7,9 @@ onEvent('item.registry', event => {
         foodBuilder.hunger(6).saturation(5.0).fastToEat(true)
     })
 
-    event.create('silicium_dust').displayName('Silicium Dust')
-    event.create('silicium_ingot').displayName('Silicium Ingot')
-    event.create('silicium_sheet').displayName('Silicium sheet')
+    event.create('silicium_dust').displayName('Silicium Dust').glow(true)
+    event.create('silicium_ingot').displayName('Silicium Ingot').glow(true)
+    event.create('silicium_sheet').displayName('Silicium sheet').glow(true)
     event.create('motor').displayName('Small electric motor')
     event.create('magnetite').displayName('Magnetite')
 
