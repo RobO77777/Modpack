@@ -40,6 +40,10 @@ onEvent('recipes', event => {
 				"count": 28
 			  },
 			  {
+				"item": "create:brass_ingot",
+				"count": 4
+			  },
+			  {
 				"tag": "forge:plates/steel",
 				"count": 2
 			  },
@@ -97,6 +101,10 @@ onEvent('recipes', event => {
 			  {
 				"tag": "forge:plates/steel",
 				"count": 4
+			  },
+			  {
+				"item": "create:brass_ingot",
+				"count": 6
 			  },
 			  {
 				"tag": "forge:wires/steel",
@@ -165,6 +173,10 @@ onEvent('recipes', event => {
 				"count": 4
 			  },
 			  {
+				"item": "create:brass_ingot",
+				"count": 6
+			  },
+			  {
 				"item": "create:cogwheel",
 				"count": 1
 			  },
@@ -194,6 +206,10 @@ onEvent('recipes', event => {
 				"count": 4
 			  },
 			  {
+				"item": "create:brass_ingot",
+				"count": 4
+			  },
+			  {
 				"item": "create:cogwheel",
 				"count": 1
 			  },
@@ -215,6 +231,10 @@ onEvent('recipes', event => {
 			"materials": [
 			  {
 				"item": "minecraft:gray_wool",
+				"count": 1
+			  },
+			  {
+				"item": "create:brass_ingot",
 				"count": 1
 			  },
 			  {
@@ -246,6 +266,10 @@ onEvent('recipes', event => {
 				"count": 1
 			  },
 			  {
+				"item": "create:brass_ingot",
+				"count": 1
+			  },
+			  {
 				"item": "minecraft:gray_wool",
 				"count": 1
 			  }
@@ -267,6 +291,10 @@ onEvent('recipes', event => {
 			  },
 			  {
 				"tag": "forge:plates/steel",
+				"count": 1
+			  },
+			  {
+				"item": "create:brass_ingot",
 				"count": 1
 			  },
 			  {
@@ -298,6 +326,10 @@ onEvent('recipes', event => {
 				"count": 2
 			  },
 			  {
+				"item": "create:brass_ingot",
+				"count": 3
+			  },
+			  {
 				"tag": "forge:wires/steel",
 				"count": 1
 			  },
@@ -319,6 +351,10 @@ onEvent('recipes', event => {
 			  },
 			  {
 				"tag": "forge:glass_panes",
+				"count": 1
+			  },
+			  {
+				"item": "create:brass_ingot",
 				"count": 1
 			  },
 			  {
@@ -352,6 +388,10 @@ onEvent('recipes', event => {
 			  {
 				"tag": "forge:wires/steel",
 				"count": 3
+			  },
+			  {
+				"item": "create:brass_ingot",
+				"count": 8
 			  },
 			  {
 				"item": "create:cogwheel",
@@ -406,6 +446,10 @@ onEvent('recipes', event => {
 				"count": 1
 			  },
 			  {
+				"item": "create:brass_ingot",
+				"count": 1
+			  },
+			  {
 				"tag": "forge:plates/steel",
 				"count": 1
 			  }
@@ -428,6 +472,10 @@ onEvent('recipes', event => {
 			  {
 				"tag": "forge:wires/steel",
 				"count": 2
+			  },
+			  {
+				"item": "create:brass_ingot",
+				"count": 4
 			  },
 			  {
 				"item": "create:cogwheel",
@@ -483,6 +531,10 @@ onEvent('recipes', event => {
 				"count": 1
 			  },
 			  {
+				"item": "create:brass_ingot",
+				"count": 1
+			  },
+			  {
 				"tag": "forge:glass_panes",
 				"count": 1
 			  },
@@ -509,6 +561,10 @@ onEvent('recipes', event => {
 			  {
 				"tag": "forge:wires/steel",
 				"count": 1
+			  },
+			  {
+				"item": "create:brass_ingot",
+				"count": 4
 			  },
 			  {
 				"item": "create:cogwheel",
@@ -543,6 +599,10 @@ onEvent('recipes', event => {
 				"count": 1
 			  },
 			  {
+				"item": "create:brass_ingot",
+				"count": 1
+			  },
+			  {
 				"tag": "forge:wool",
 				"count": 2
 			  }
@@ -564,6 +624,10 @@ onEvent('recipes', event => {
 			  },
 			  {
 				"tag": "forge:rods/steel",
+				"count": 1
+			  },
+			  {
+				"item": "create:brass_ingot",
 				"count": 1
 			  },
 			  {
@@ -624,6 +688,10 @@ onEvent('recipes', event => {
 				"count": 2
 			  },
 			  {
+				"item": "create:brass_ingot",
+				"count": 1
+			  },
+			  {
 				"item": "minecraft:gray_wool",
 				"count": 1
 			  }
@@ -646,6 +714,10 @@ onEvent('recipes', event => {
 			  {
 				"tag": "forge:rods/steel",
 				"count": 3
+			  },
+			  {
+				"item": "create:brass_ingot",
+				"count": 1
 			  },
 			  {
 				"item": "minecraft:gray_wool",
