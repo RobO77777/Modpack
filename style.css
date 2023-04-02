@@ -88,5 +88,13 @@
   transform: translate(-50%, -50%);
 }
 
+.zoom {
+  transition: transform .5s;
+}
+
+.zoom:hover {
+  transform: scale(1.09);
+}
+
 
 
