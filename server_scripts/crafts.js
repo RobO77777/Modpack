@@ -841,7 +841,9 @@ onEvent('recipes', event => {
   	})
 	
 
-	
+		//mekanism pipe
+
+		
 	//Spartan
 
 	event.remove({id: 'spartanweaponry:throwing_knife_gold'})
