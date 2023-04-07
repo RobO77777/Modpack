@@ -72,6 +72,14 @@ onEvent('block.tags', event => {
 
 
     ])
+	//marbre
+    event.removeAllTagsFrom([
+		/quark:marble/,
+		/quark:polished_marble/,
+
+
+
+    ])
     //retirer les tags blocks au blocks de minerais de copper non voulu
     event.removeAllTagsFrom('mekanism:copper_ore')
     event.removeAllTagsFrom('iceandfire:copper_ore')

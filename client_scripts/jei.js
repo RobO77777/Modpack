@@ -32,6 +32,8 @@ onEvent('jei.hide.items', event => {
 		/itemfilters/,
 		/ftbquests/,
 		/ftblibrary/,
+		/quark:marble/,
+		/quark:polished_marble/,
 
 	])
 
