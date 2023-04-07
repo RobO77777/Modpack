@@ -819,7 +819,12 @@ onEvent('recipes', event => {
 
 
   	})
+		//pipes
 
+	event.remove({id: 'create:crafting/kinetics/fluid_pipe'})
+	event.remove({id: 'create:crafting/kinetics/smart_fluid_pipe'})
+	event.remove({id: 'create:crafting/kinetics/fluid_valve'})
+	event.remove({id: 'create:crafting/kinetics/mechanical_pump'})
 	//mekanism
 
 	event.remove({output: 'mekanismgenerators:wind_generator'})
