@@ -40,20 +40,7 @@ onEvent('recipes', event => {
 
     }
 
-    function multiTiers(event) {
-        const circuitTypes = ['basic', 'advanced', 'elite', 'ultimate'];
-        const ingredients = ['minecraft:redstone', 'minecraft:iron_ingot', 'minecraft:gold_ingot', 'minecraft:diamond'];
-    
-        for (let i = 0; i < circuitTypes.length; i++) {
-            
-            event.shaped(`my_mod:circuit_${circuitTypes[i]}`, [
-                'III',
-                'IRI',
-                'III'
-            ], {
-                I: ingredients[i],
-                R: 'minecraft:redstone'
-            });
-        }
-    }
+
+
+
 })

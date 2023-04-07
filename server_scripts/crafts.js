@@ -843,7 +843,7 @@ onEvent('recipes', event => {
 
 		//mekanism pipe
 
-		
+
 	//Spartan
 
 	event.remove({id: 'spartanweaponry:throwing_knife_gold'})
@@ -854,51 +854,29 @@ onEvent('recipes', event => {
 	//Extended crafting
 
 	event.remove({id: /extendedcrafting:/})
-	event.shaped('extendedcrafting:basic_table', [
-    	'IBI',
-   		'BCB',
-  		'ISI'
-  	], {
-    	C: 'minecraft:crafting_table',
-    	B: 'mekanism:basic_control_circuit',
-		S: 'mekanism:steel_casing',
-		I: 'mekanism:ingot_steel',
+		
+		//craft tables
+	const tableTypes = ['basic', 'advanced', 'elite', 'ultimate'];
+	const controlCircuits = ['basic_control_circuit', 'advanced_control_circuit', 'elite_control_circuit', 'ultimate_control_circuit'];
+	const alloys = ['steel_casing', 'alloy_infused', 'alloy_reinforced', 'alloy_atomic'];
 
-  	})
-	event.shaped('extendedcrafting:advanced_table', [
-    	'IBI',
-   		'BCB',
-  		'ISI'
-  	], {
-    	C: 'extendedcrafting:basic_table',
-    	B: 'mekanism:advanced_control_circuit',
-		S: 'mekanism:alloy_infused',
-		I: 'mekanism:ingot_steel',
+	for (let i = 0; i < tableTypes.length; i++) {
+		let centerItem = i === 0 ? 'minecraft:crafting_table' : `extendedcrafting:${tableTypes[i - 1]}_table`;
 
-  	})
-	event.shaped('extendedcrafting:elite_table', [
-    	'IBI',
-   		'BCB',
-  		'ISI'
-  	], {
-    	C: 'extendedcrafting:advanced_table',
-    	B: 'mekanism:elite_control_circuit',
-		S: 'mekanism:alloy_reinforced',
-		I: 'mekanism:ingot_steel',
+		event.shaped(`extendedcrafting:${tableTypes[i]}_table`, [
+			'IBI',
+			'BCB',
+			'ISI'
+		], {
+			C: centerItem,
+			B: `mekanism:${controlCircuits[i]}`,
+			S: `mekanism:${alloys[i]}`,
+			I: 'mekanism:ingot_steel'
+		});
+	}
 
-  	})
-	event.shaped('extendedcrafting:ultimate_table', [
-    	'IBI',
-   		'BCB',
-  		'ISI'
-  	], {
-    	C: 'extendedcrafting:elite_table',
-    	B: 'mekanism:ultimate_control_circuit',
-		S: 'mekanism:alloy_atomic',
-		I: 'mekanism:ingot_steel',
 
-  	})
-	  
+
 	event.shapeless('extendedcrafting:basic_auto_table', ['mekanism:dictionary', 'mekanism:basic_energy_cube', 'extendedcrafting:basic_table'])
 	event.shapeless('extendedcrafting:advanced_auto_table', ['mekanism:dictionary', 'mekanism:advanced_energy_cube', 'extendedcrafting:advanced_table'])
 	event.shapeless('extendedcrafting:elite_auto_table', ['mekanism:dictionary', 'mekanism:elite_energy_cube', 'extendedcrafting:elite_table'])
