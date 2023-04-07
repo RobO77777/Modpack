@@ -755,17 +755,6 @@ onEvent('recipes', event => {
 
 
 
-	//projectE
-
-	event.remove({id: 'projecte:gem_helmet'})
-	event.remove({id: 'projecte:gem_chestplate'})
-	event.remove({id: 'projecte:gem_boots'})
-	event.remove({id: 'projecte:gem_leggings'})
-	event.remove({id: 'projecte:collector_mk1'})
-	event.remove({id: 'projecte:collector_mk2'})
-	event.remove({id: 'projecte:collector_mk3'})
-	event.remove({id: 'projecte:transmutation_table'})
-
 	//create
 
 	event.remove({id: 'quark:building/crafting/rope'})
@@ -875,8 +864,6 @@ onEvent('recipes', event => {
 		});
 	}
 
-
-
 	event.shapeless('extendedcrafting:basic_auto_table', ['mekanism:dictionary', 'mekanism:basic_energy_cube', 'extendedcrafting:basic_table'])
 	event.shapeless('extendedcrafting:advanced_auto_table', ['mekanism:dictionary', 'mekanism:advanced_energy_cube', 'extendedcrafting:advanced_table'])
 	event.shapeless('extendedcrafting:elite_auto_table', ['mekanism:dictionary', 'mekanism:elite_energy_cube', 'extendedcrafting:elite_table'])
@@ -936,7 +923,12 @@ onEvent('recipes', event => {
     	S: 'projecte:philosophers_stone',
     	W: '#minecraft:logs'
   	})
-	
+
+	const ids = ['gem_helmet', 'gem_chestplate', 'gem_boots', 'gem_leggings', 'collector_mk1', 'collector_mk2', 'collector_mk3', 'transmutation_table']
+	ids.forEach(id => {
+	event.remove({id: `projecte:${id}`})
+	})
+
 	//Vanilla
 
 	event.shapeless('4x minecraft:cobblestone', ['minecraft:stone', '#forge:dusts/glowstone'])
