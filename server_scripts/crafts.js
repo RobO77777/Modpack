@@ -784,7 +784,7 @@ onEvent('recipes', event => {
 
 	event.recipes.createMixing('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite']).heated()
 	event.recipes.createMixing('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite', Fluid.of("minecraft:lava", 100)])
-	event.recipes.createMixing('2x kubejs:cement', ['2x minecraft:sand', '2x minecraft:gravel', Fluid.of("minecraft:water", 1000)])
+	event.recipes.createMixing('kubejs:cement', ['minecraft:sand', 'minecraft:gravel', Fluid.of("minecraft:water", 500)])
 	
 	event.stonecutting('create:cogwheel', 'create:large_cogwheel')
 	event.stonecutting('4x create:shaft', 'create:andesite_alloy')
@@ -819,12 +819,7 @@ onEvent('recipes', event => {
 
 
   	})
-		//pipes
 
-	event.remove({id: 'create:crafting/kinetics/fluid_pipe'})
-	event.remove({id: 'create:crafting/kinetics/smart_fluid_pipe'})
-	event.remove({id: 'create:crafting/kinetics/fluid_valve'})
-	event.remove({id: 'create:crafting/kinetics/mechanical_pump'})
 	//mekanism
 
 	event.remove({output: 'mekanismgenerators:wind_generator'})
