@@ -227,3 +227,57 @@ body {
   background: #CD201F;
   color: #ffffff;
 }
+
+
+/* vertical menue*/
+
+.vertical-menu {
+  width: 200px;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* menu */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.menu a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  color: #333;
+}
+.menu a:hover {
+  background-color: #ddd;
+}
+.content {
+  margin-left: 200px;
+  padding: 20px;
+}
