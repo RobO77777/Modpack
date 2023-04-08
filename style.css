@@ -11,7 +11,6 @@ h1{
   color: #484848;
   font-size: 50px;
   font-weight: bold;
-  font-family: monospace;
   letter-spacing: 7px;
   cursor: pointer
 }
@@ -84,18 +83,18 @@ button {
   border: none;
   letter-spacing: 0.1rem;
   font-size: 1rem;
-  padding: 1rem 3rem;
+  padding: 0.5rem 1.5rem;
   transition: 0.2s;
   position: absolute;
-  top: 950px;
+  top: 999px;
   left: 5px;
 }
 
 button:hover {
   letter-spacing: 0.2rem;
-  padding: 1.1rem 3.1rem;
-  background: var(--clr);
-  color: var(--clr);
+  padding: 0.55rem 1.55rem;
+  background:#85e51e;
+  color: #89e02b;
   /* box-shadow: 0 0 35px var(--clr); */
   animation: box 3s infinite;
 }
@@ -124,7 +123,7 @@ button i::before {
   height: 2px;
   left: 80%;
   top: -2px;
-  border: 2px solid var(--clr);
+  border: 2px solid #02fa13;
   background: #272822;
   transition: 0.2s;
 }
@@ -142,7 +141,7 @@ button i::after {
   height: 2px;
   left: 20%;
   bottom: -2px;
-  border: 2px solid var(--clr);
+  border: 2px solid #02fa13;
   background: #272822;
   transition: 0.2s;
 }
@@ -170,7 +169,7 @@ button:hover i::after {
     box-shadow: #27272c;
   }
   50% {
-    box-shadow: 0 0 25px var(--clr);
+    box-shadow: 0 0 25px #24ff33;
   }
   100% {
     box-shadow: #27272c;
