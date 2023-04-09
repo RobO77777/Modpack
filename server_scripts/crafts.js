@@ -1031,7 +1031,16 @@ onEvent('recipes', event => {
 		}
 
 	)
+	
+		//crafts wood
+	event.shaped('minecraft:chest', [
+    	'PPP',
+   		'P P',
+  		'PPP'
+  	], {
+    	P: 'biomesoplenty:mahogany_planks'
 
+  	})
 	//crafts transistors
 	event.shaped('kubejs:transistor', [
     	' P ',

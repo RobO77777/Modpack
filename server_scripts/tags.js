@@ -32,6 +32,7 @@ onEvent('item.tags', event => {
     //TK
 
     event.add('forge:wither_bones', 'iceandfire:witherbone')
+
 })
 
 //blocks tags
