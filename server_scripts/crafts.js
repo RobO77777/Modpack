@@ -814,8 +814,10 @@ onEvent('recipes', event => {
 	event.remove({output: 'mekanismgenerators:wind_generator'})
 
 	event.recipes.createCrushing('mekanism:dust_copper', ['create:copper_ingot'])
-	event.recipes.createMixing('mekanism:dust_bronze', ['mekanism:dust_copper', 'mekanism:dust_tin']).superheated()
-	event.recipes.createMixing('mekanism:dust_steel', ['mekanism:dust_coal', 'mekanism:dust_iron']).superheated()
+	
+	event.recipes.createMixing('kubejs:crushed_bronze_ore', ['create:crushed_copper_ore', 'create:crushed_tin_ore']).superheated()
+	event.recipes.createMixing('kubejs:crushed_steel_ore', ['create:crushed_iron_ore', 'minecraft:coal']).superheated()
+	
 	event.shaped('mekanismgenerators:wind_generator', [
     	' P ',
    		'OAO',

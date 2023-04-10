@@ -4,13 +4,9 @@ onEvent('item.tags', event => {
     
     //retirer les tags aux items de copper non voulu
     event.removeAllTagsFrom([
-    'immersiveengineering:dust_copper', 
-    'immersiveengineering:dust_steel', 
     'iceandfire:copper_ingot', 
-    'immersiveengineering:ingot_copper',
     'mekanism:ingot_copper',
     'iceandfire:copper_nugget',
-    'immersiveengineering:nugget_copper',
     'mekanism:nugget_copper'
 
 
@@ -63,8 +59,6 @@ onEvent('block.tags', event => {
     event.removeAllTagsFrom([
         'iceandfire:copper_block',
         'mekanism:block_copper',
-        'immersiveengineering:storage_copper',
-        'immersiveengineering:ore_copper',
         'iceandfire:copper_ore',
         'mekanism:copper_ore'
 
@@ -91,8 +85,6 @@ onEvent('recipes', event => {
 	
 	//iron
 
-	event.remove({id: 'create:smelting/iron_ingot_from_crushed'})
-	event.remove({id: 'create:blasting/iron_ingot_from_crushed'})
 	event.remove({id: 'minecraft:iron_ingot_from_blasting'})
 	event.remove({id: 'minecraft:iron_ingot'})
 
@@ -113,8 +105,7 @@ onEvent('recipes', event => {
 	})
 
 	//gold
-	event.remove({id: 'create:smelting/gold_ingot_from_crushed'})
-	event.remove({id: 'create:blasting/gold_ingot_from_crushed'})
+
 	event.remove({id: 'minecraft:gold_ingot_from_blasting'})
 	event.remove({id: 'minecraft:gold_ingot'})
 
@@ -135,8 +126,7 @@ onEvent('recipes', event => {
 	})
 
 	//copper
-	event.remove({id: 'create:smelting/copper_ingot_from_crushed'})
-	event.remove({id: 'create:blasting/copper_ingot_from_crushed'})
+
 	event.remove({id: 'create:smelting/copper_ingot_from_ore'})
 	event.remove({id: 'create:blasting/copper_ingot_from_ore'})
 
@@ -189,8 +179,7 @@ onEvent('recipes', event => {
 	//uranium
 
 	//osmium
-	event.remove({id: 'create:smelting/ingot_osmium_compat_mekanism'})
-	event.remove({id: 'create:blasting/ingot_osmium_compat_mekanism'})
+
 	event.remove({id: 'mekanism:processing/osmium/ingot/from_ore_smelting'})
 	event.remove({id: 'mekanism:processing/osmium/ingot/from_ore_blasting'})
 
@@ -212,8 +201,6 @@ onEvent('recipes', event => {
 
 	//zinc
 	
-	event.remove({id: 'create:smelting/zinc_ingot_from_crushed'})
-	event.remove({id: 'create:blasting/zinc_ingot_from_crushed'})
 	event.remove({id: 'create:smelting/zinc_ingot_from_ore'})
 	event.remove({id: 'create:blasting/zinc_ingot_from_ore'})
 	
@@ -272,6 +259,8 @@ onEvent('recipes', event => {
 	//steel
 
 	event.recipes.createPressing('kubejs:steel_sheet', '#forge:ingots/steel')
+	event.smelting('mekanism:ingot_steel', 'kubejs:crushed_steel_ore')
+	event.blasting('mekanism:ingot_steel', 'kubejs:crushed_steel_ore')
 	
 	event.custom(
 		{
@@ -288,8 +277,47 @@ onEvent('recipes', event => {
 	
 
 
+	//bronze
+	event.smelting('mekanism:ingot_bronze', 'kubejs:crushed_bronze_ore')
+	event.blasting('mekanism:ingot_bronze', 'kubejs:crushed_bronze_ore')
 
+	//tin
 
+	event.recipes.createCrushing('mekanism:dust_tin', ['create:crushed_tin_ore'])
+	event.custom({
+		"type": "create:milling",
+		"ingredients": [
+		  {
+			"item": 'create:crushed_tin_ore'
+		  }
+		],
+		"results": [
+		  {
+			"item": 'mekanism:dust_tin',
+			"chance": 1
+		  }
+		],
+		"processingTime": 50
+	})
+
+	//lead
+
+	event.recipes.createCrushing('mekanism:dust_lead', ['create:crushed_lead_ore'])
+	event.custom({
+		"type": "create:milling",
+		"ingredients": [
+		  {
+			"item": 'create:crushed_lead_ore'
+		  }
+		],
+		"results": [
+		  {
+			"item": 'mekanism:dust_lead',
+			"chance": 1
+		  }
+		],
+		"processingTime": 50
+	})
 
 
 })
