@@ -2,14 +2,16 @@
 
 console.info('Hello, World! (You will only see this line once in console, during startup)')
 
-/*
+
 onEvent('block.registry', event => {
-	event.create('osmium_casing')
-	.material('stone')
-	.hardness(5)
-	.harvestTool('pickaxe', 1)
+	
+	event.create('wood_casing')
+	.material('wood')
+	.hardness(2.5)
+	.harvestTool('axe', 1)
 	.requiresTool(true)
+	.displayName('Wood Casing')
 
 })
-*/
+
 
