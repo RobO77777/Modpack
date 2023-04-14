@@ -33,9 +33,10 @@ onEvent('item.tags', event => {
 
     event.add('forge:wither_bones', 'iceandfire:witherbone')
 
-    //meka
-        //plastic
-    event.add('items_transistors', ['mekanism:hdpe_pellet', 'industrialforegoing:tinydryrubber', 'create:andesite_alloy']);
+    //kubejs
+    event.add('forge:planks', 'kubejs:wood_casing')
+
+
 })
 
 //blocks tags

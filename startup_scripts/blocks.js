@@ -7,9 +7,8 @@ onEvent('block.registry', event => {
 	
 	event.create('wood_casing')
 	.material('wood')
-	.hardness(2.5)
+	.hardness(1)
 	.harvestTool('axe', 1)
-	.requiresTool(true)
 	.displayName('Wood Casing')
 
 })

@@ -1203,6 +1203,22 @@ onEvent('recipes', event => {
 			P: 'biomesoplenty:willow_planks'
 	
 		  })
+		event.shaped('minecraft:chest', [
+			'PPP',
+			'P P',
+			'PPP'
+		  ], {
+			P: 'kubejs:wood_casing'
+	
+		  })
+		event.shaped('kubejs:wood_casing', [
+			'PPP',
+			'P P',
+			'PPP'
+		  ], {
+			P: 'minecraft:stick'
+	
+		  })
 
 //Items filters
 	event.remove({id: /itemfilters/})
