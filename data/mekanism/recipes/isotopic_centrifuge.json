@@ -1,1 +1,1 @@
-{"type":"mekanism:mek_data","result":{"item":"mekanism:isotopic_centrifuge"},"pattern":["III","CTC","III"],"key":{"I":{"tag":"forge:ingots/lead"},"C":{"tag":"forge:circuits/ultimate"},"T":{"item":"mekanism:basic_chemical_tank"}}}
+{"type":"mekanism:mek_data","result":{"item":"mekanism:isotopic_centrifuge"},"pattern":["III","CTP","III"],"key":{"I":{"tag":"forge:ingots/lead"},"C":{"tag":"forge:circuits/ultimate"},"T":{"item":"mekanism:basic_chemical_tank"}, "P":{"item": "kubejs:processor_ultimate"}}}

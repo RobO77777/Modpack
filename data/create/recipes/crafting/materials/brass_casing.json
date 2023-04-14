@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "CAC",
+    " C "
+  ],
+  "key": {
+    "A": {
+      "item": "create:andesite_casing"
+    },
+    "C": {
+      "tag": "forge:plates/brass"
+    }
+  },
+  "result": {
+    "item": "create:brass_casing",
+    "count": 1
+  }
+}

@@ -35,7 +35,7 @@
         },
         {
           "type": "item",
-          "name": "iceandfire:amythest_gem",
+          "name": "explorercraft:amethyst",
           "functions": [
             {
               "function": "set_count",

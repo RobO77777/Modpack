@@ -2,7 +2,7 @@ onEvent('recipes', event => {
 
 //mods
 
-	//CGM
+//CGM
 		
 		//advanced bullet
 	event.remove({id: 'cgm:advanced_bullet'})
@@ -755,7 +755,7 @@ onEvent('recipes', event => {
 
 
 
-	//create
+//create
 
 	event.remove({id: 'quark:building/crafting/rope'})
 	event.remove({id: 'create:crafting/kinetics/rope_pulley'})
@@ -808,8 +808,19 @@ onEvent('recipes', event => {
 
 
   	})
+	
+	event.custom({
+		"type":"createaddition:rolling",
+		"input": {
+			  "item": 'kubejs:steel_sheet'
+		},
+		"result": {
+			"item": 'kubejs:steel_wire',
+			"count": 2
+		}
+	})
 
-	//mekanism
+//mekanism
 
 	event.remove({output: 'mekanismgenerators:wind_generator'})
 
@@ -835,14 +846,14 @@ onEvent('recipes', event => {
 		//mekanism pipe
 
 
-	//Spartan
+//Spartan
 
 	event.remove({id: 'spartanweaponry:throwing_knife_gold'})
 	event.remove({id: 'spartanweaponry:throwing_knife_netherite'})
 	event.remove({id: 'spartanweaponry:throwing_knife_diamond'})
 	event.remove({id: 'spartanweaponry:throwing_knife_iron'})
 	
-	//Extended crafting
+//Extended crafting
 
 	event.remove({id: /extendedcrafting:/})
 		
@@ -871,11 +882,11 @@ onEvent('recipes', event => {
 	event.shapeless('extendedcrafting:elite_auto_table', ['mekanism:dictionary', 'mekanism:elite_energy_cube', 'extendedcrafting:elite_table'])
 	event.shapeless('extendedcrafting:ultimate_auto_table', ['mekanism:dictionary', 'mekanism:ultimate_energy_cube', 'extendedcrafting:ultimate_table'])
 	
-	//ice and fire
+//ice and fire
 
 	event.remove({id: 'iceandfire:bestiary'})
 
-	//projectE
+//projectE
 	event.shaped('projecte:collector_mk1', [
     	'SGS',
    		'SNS',
@@ -931,12 +942,12 @@ onEvent('recipes', event => {
 	event.remove({id: `projecte:${id}`})
 	})
 
-	//Vanilla
+//Vanilla
 
 	event.shapeless('4x minecraft:cobblestone', ['minecraft:stone', '#forge:dusts/glowstone'])
 	event.smelting('mekanism:dust_charcoal', '#minecraft:planks')
 
-	//Kubejs
+//Kubejs
 
 		//electric motor
 
@@ -967,97 +978,13 @@ onEvent('recipes', event => {
 		//craft magnetite
 	event.recipes.createMixing('kubejs:magnetite', ['mekanism:dust_iron', 'create:zinc_nugget']).superheated()
 	
-
-
-
-
-	//Autres crafts
-	event.shapeless('minecraft:blaze_rod', ['#forge:rods/all_metal', 'minecraft:blaze_powder', '#magic_dust'])
-	event.recipes.createMixing('minecraft:blaze_rod', ['#forge:rods/all_metal', 'minecraft:blaze_powder', '#magic_dust'])
-	event.shaped('minecraft:charcoal', [
-    	'CCC',
-   		'CCC',
-  		'CCC'
-  	], {
-    	C: 'mekanism:dust_charcoal'
-  	})
-
-	event.shaped('mowziesmobs:earthbore_gauntlet', [
-    	'DJD',
-   		'DRD',
-  		'DGD'
-  	], {
-    	D: 'minecraft:dirt',
-    	G: 'bountifulbaubles:gloves_dexterity',
-    	R: 'botania:rune_earth',
-    	J: 'explorercraft:jade'
-
-  	})
-
-	  event.shaped('mowziesmobs:earth_talisman', [
-    	'JE ',
-   		'ESE',
-  		' ET'
-  	], {
-    	S: 'minecraft:stick',
-    	T: 'botania:terrasteel_ingot',
-    	E: 'botania:life_essence',
-    	J: 'explorercraft:jade'
-
-  	})
-
-
-
-	event.custom(
-		{
-			"type": "botania:runic_altar",
-			"output": {
-			  "item": "bountifulbaubles:bezoar",
-			  "count": 2
-			},
-			"mana": 5200,
-			"ingredients": [
-			  {
-				"item": "create:dough"
-			  },
-			  {
-				"item": 'mowziesmobs:naga_fang'
-			  },
-			  {
-				"item": "botania:mana_diamond"
-			  },
-			  {
-				"item": "minecraft:glowstone_dust"
-			  }
-			]
-		}
-
-	)
-	
-		//crafts wood
-	event.shaped('minecraft:chest', [
-    	'PPP',
-   		'P P',
-  		'PPP'
-  	], {
-    	P: 'biomesoplenty:mahogany_planks'
-
-  	})
-	event.shaped('minecraft:chest', [
-    	'PPP',
-   		'P P',
-  		'PPP'
-  	], {
-    	P: 'biomesoplenty:willow_planks'
-
-  	})
-	//crafts transistors
+		//crafts transistors
 	event.shaped('kubejs:transistor', [
-    	' P ',
-   		' S ',
+    	'PPP',
+   		'PSP',
   		' C '
   	], {
-    	P: 'mekanism:hdpe_pellet',
+    	P: '#items_transistors',
     	S: 'kubejs:silicium_dust',
     	C: 'createaddition:copper_wire',
 
@@ -1068,8 +995,8 @@ onEvent('recipes', event => {
 		"type": "extendedcrafting:shaped_table",
 		"pattern": [
 		  " PPP ",
-		  " SSS ",
-		  "  A  ",
+		  " PSP ",
+		  " PAP ",
 		  " C C ",
 		  " C C "
 		],
@@ -1155,11 +1082,209 @@ onEvent('recipes', event => {
 		}
 	  }) 
 
+	event.custom({
+		"type": "extendedcrafting:shaped_table",
+		"pattern": [
+		  " PPP ",
+		  " PSP ",
+		  " PAP ",
+		  " C C ",
+		  " C C "
+		],
+		"key": {
+		  "A": {
+			"item": 'mekanism:alloy_infused' 
+		  },
+		  "P": {
+			"item": 'industrialforegoing:tinydryrubber'
+		  },
+		  "S": {
+			"item": 'kubejs:silicium_dust'
+		  },
+		  "C": {
+			"item": 'createaddition:copper_wire'
+		  }
+		},
+		"result": {
+		  "item": "kubejs:transistor_advanced",
+		  "count": 1
+		}
+	  }) 
+	event.custom({
+		"type": "extendedcrafting:shaped_table",
+		"pattern": [
+		  " PPPPP ",
+		  " PSSSP ",
+		  " PSSSP ",
+		  " PAAAP ",
+		  "  C C  ",
+		  "  C C  ",
+		  "  C C  "
+		],
+		"key": {
+		  "A": {
+			"item": 'mekanism:alloy_reinforced'
+		  },
+		  "P": {
+			"item": 'industrialforegoing:tinydryrubber'
+		  },
+		  "S": {
+			"item": 'kubejs:silicium_dust'
+		  },
+		  "C": {
+			"item": 'createaddition:copper_wire'
+		  }
+		},
+		"result": {
+		  "item": "kubejs:transistor_elite",
+		  "count": 1
+		}
+	  }) 
+	event.custom({
+		"type": "extendedcrafting:shaped_table",
+		"pattern": [
+		  " PPPPPPP ",
+		  " PSSSSSP ",
+		  " PSSSSSP ",
+		  " PSAAASP ",
+		  " PSAAASP ",
+		  "  C   C  ",
+		  "  C   C  ",
+		  "  C   C  ",
+		  "  C   C  "
+		],
+		"key": {
+		  "A": {
+			"item": 'mekanism:alloy_atomic'
+		  },
+		  "P": {
+			"item": 'industrialforegoing:tinydryrubber'
+		  },
+		  "S": {
+			"item": 'kubejs:silicium_dust'
+		  },
+		  "C": {
+			"item": 'createaddition:copper_wire'
+		  }
+		},
+		"result": {
+		  "item": 'kubejs:transistor_ultimate',
+		  "count": 1
+		}
+	  }) 
+
+	  	//crafts processors
+
+		  event.shaped('kubejs:processor', [
+			'TST',
+			'SSS',
+			'TST'
+		  ], {
+			T: 'kubejs:transistor',
+			S: 'kubejs:steel_sheet'
+
+	
+	
+		  })
+
+
+//Autres crafts
+	event.shapeless('minecraft:blaze_rod', ['#forge:rods/all_metal', 'minecraft:blaze_powder', '#magic_dust'])
+	event.recipes.createMixing('minecraft:blaze_rod', ['#forge:rods/all_metal', 'minecraft:blaze_powder', '#magic_dust'])
+	event.shaped('minecraft:charcoal', [
+    	'CCC',
+   		'CCC',
+  		'CCC'
+  	], {
+    	C: 'mekanism:dust_charcoal'
+  	})
+
+	event.shaped('mowziesmobs:earthbore_gauntlet', [
+    	'DJD',
+   		'DRD',
+  		'DGD'
+  	], {
+    	D: 'minecraft:dirt',
+    	G: 'bountifulbaubles:gloves_dexterity',
+    	R: 'botania:rune_earth',
+    	J: 'explorercraft:jade'
+
+  	})
+
+	  event.shaped('mowziesmobs:earth_talisman', [
+    	'JE ',
+   		'ESE',
+  		' ET'
+  	], {
+    	S: 'minecraft:stick',
+    	T: 'botania:terrasteel_ingot',
+    	E: 'botania:life_essence',
+    	J: 'explorercraft:jade'
+
+  	})
+
+
+
+	event.custom(
+		{
+			"type": "botania:runic_altar",
+			"output": {
+			  "item": "bountifulbaubles:bezoar",
+			  "count": 2
+			},
+			"mana": 5200,
+			"ingredients": [
+			  {
+				"item": "create:dough"
+			  },
+			  {
+				"item": 'mowziesmobs:naga_fang'
+			  },
+			  {
+				"item": "botania:mana_diamond"
+			  },
+			  {
+				"item": "minecraft:glowstone_dust"
+			  }
+			]
+		}
+
+	)
+		//crafts wood
+		event.shaped('minecraft:chest', [
+			'PPP',
+			   'P P',
+			  'PPP'
+		  ], {
+			P: 'biomesoplenty:mahogany_planks'
+	
+		  })
+		event.shaped('minecraft:chest', [
+			'PPP',
+			   'P P',
+			  'PPP'
+		  ], {
+			P: 'biomesoplenty:willow_planks'
+	
+		  })
+
+
+
+
+
 
 
 
 	//Items filters
 	event.remove({id: /itemfilters/})
+
+
+
+
+
+
+
+
 
 
 /*	event.custom({
@@ -1193,7 +1318,24 @@ onEvent('recipes', event => {
 		}
 	  }) */
 
+	  //ec_mining_world_tt
 
+	  event.remove({id: 'ec_mining_world_tt:miningworld_portal_igniterrecipe'})
+	  event.remove({id: 'ec_mining_world_tt:portalblockrecipe'})
+	  event.shapeless('ec_mining_world_tt:miningworld', ['minecraft:flint_and_steel', '#forge:ores', '#magic_dust'])
+	  event.shaped('ec_mining_world_tt:portalblock', [
+    	'OBO',
+   		'BDB',
+  		'OBO'
+  	], {
+    	O: '#forge:ores',
+    	B: 'minecraft:stone_bricks',
+    	D: 'minecraft:green_dye',
+
+
+  	})
+
+  	
 })
 
 
