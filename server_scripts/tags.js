@@ -30,7 +30,7 @@ onEvent('item.tags', event => {
  
 
     //TK
-
+    event.add('forge:wires', ['minecraft:string', 'kubejs:steel_wire'])
     event.add('forge:wither_bones', 'iceandfire:witherbone')
 
     //kubejs

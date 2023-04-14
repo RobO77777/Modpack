@@ -1,0 +1,28 @@
+{
+  "type": "mcjtylib:copy_nbt",
+  "pattern": [
+    "rWr",
+    "bMb",
+    "rLr"
+  ],
+  "key": {
+    "M": {
+      "item": "rftoolsbuilder:shape_card_def"
+    },
+    "r": {
+      "item": "minecraft:redstone"
+    },
+    "b": {
+      "item": "minecraft:bucket"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    },
+    "L": {
+      "item": "minecraft:lava_bucket"
+    }
+  },
+  "result": {
+    "item": "rftoolsbuilder:shape_card_pump"
+  }
+}

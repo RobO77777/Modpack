@@ -71,6 +71,7 @@ onEvent('jei.hide.items', event => {
 		'tconstruct:crafting_station',
 		'chiselsandbits:block_bit',
 		'iceandfire:bestiary',
+		'rftoolsbase:machine_frame',
 	])
 
 

@@ -1245,6 +1245,11 @@ onEvent('recipes', event => {
 	event.remove({id: 'draconicevolution:draconium_ingot'})
 	event.recipes.createMixing('2x draconicevolution:draconium_ingot', ['2x draconicevolution:draconium_dust', 'mekanism:dust_lithium']).superheated()
 	event.recipes.createMixing('2x draconicevolution:draconium_ingot', ['2x draconicevolution:draconium_dust', 'mekanism:dust_lithium', Fluid.of("minecraft:lava", 500)])
+
+
+//rftools
+	event.remove({id: 'rftoolsbase:machine_frame'})
+
 })
 
 

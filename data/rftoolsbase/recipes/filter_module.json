@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " h ",
+    "rir",
+    " p "
+  ],
+  "key": {
+    "h": {
+      "item": "minecraft:hopper"
+    },
+    "r": {
+      "item": "minecraft:redstone"
+    },
+    "p": {
+      "item": "minecraft:paper"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "rftoolsbase:filter_module"
+  }
+}

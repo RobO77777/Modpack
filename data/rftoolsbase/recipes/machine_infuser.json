@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "srs",
+    "dMd",
+    "srs"
+  ],
+  "key": {
+    "r": {
+      "item": "minecraft:redstone"
+    },
+    "s": {
+      "item": "rftoolsbase:dimensionalshard"
+    },
+    "d": {
+      "item": "minecraft:diamond"
+    },
+    "M": {
+      "item": "industrialforegoing:machine_frame_pity"
+    }
+  },
+  "result": {
+    "item": "rftoolsbase:machine_infuser"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "mcjtylib:copy_nbt",
+  "pattern": [
+    "DDD",
+    "DMD",
+    "DDD"
+  ],
+  "key": {
+    "M": {
+      "item": "rftoolsbuilder:shape_card_quarry_clear_silk"
+    },
+    "D": {
+      "item": "minecraft:dirt"
+    }
+  },
+  "result": {
+    "item": "rftoolsbuilder:shape_card_quarry_silk"
+  }
+}
