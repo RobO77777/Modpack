@@ -980,212 +980,148 @@ onEvent('recipes', event => {
 	
 		//crafts transistors
 	event.shaped('kubejs:transistor', [
-    	'PPP',
-   		'PSP',
+    	' S ',
+   		' A ',
   		' C '
   	], {
-    	P: '#items_transistors',
+    	A: 'create:andesite_alloy',
+    	S: 'kubejs:silicium_dust',
+    	C: 'createaddition:copper_wire',
+
+
+  	})
+	event.shaped('kubejs:transistor_advanced', [
+    	' S ',
+   		' A ',
+  		' C '
+  	], {
+    	A: 'mekanism:alloy_infused',
+    	S: 'kubejs:silicium_dust',
+    	C: 'createaddition:copper_wire',
+
+
+  	})
+	event.shaped('kubejs:transistor_elite', [
+    	' S ',
+   		' A ',
+  		' C '
+  	], {
+    	A: 'mekanism:alloy_reinforced',
+    	S: 'kubejs:silicium_dust',
+    	C: 'createaddition:copper_wire',
+
+
+  	})
+	event.shaped('kubejs:transistor_ultimate', [
+    	' S ',
+   		' A ',
+  		' C '
+  	], {
+    	A: 'mekanism:alloy_atomic',
     	S: 'kubejs:silicium_dust',
     	C: 'createaddition:copper_wire',
 
 
   	})
 
-	event.custom({
-		"type": "extendedcrafting:shaped_table",
-		"pattern": [
-		  " PPP ",
-		  " PSP ",
-		  " PAP ",
-		  " C C ",
-		  " C C "
-		],
-		"key": {
-		  "A": {
-			"item": 'mekanism:alloy_infused' 
-		  },
-		  "P": {
-			"item": 'mekanism:hdpe_pellet'
-		  },
-		  "S": {
-			"item": 'kubejs:silicium_dust'
-		  },
-		  "C": {
-			"item": 'createaddition:copper_wire'
-		  }
-		},
-		"result": {
-		  "item": "kubejs:transistor_advanced",
-		  "count": 1
-		}
-	  }) 
-	event.custom({
-		"type": "extendedcrafting:shaped_table",
-		"pattern": [
-		  " PPPPP ",
-		  " PSSSP ",
-		  " PSSSP ",
-		  " PAAAP ",
-		  "  C C  ",
-		  "  C C  ",
-		  "  C C  "
-		],
-		"key": {
-		  "A": {
-			"item": 'mekanism:alloy_reinforced'
-		  },
-		  "P": {
-			"item": 'mekanism:hdpe_pellet'
-		  },
-		  "S": {
-			"item": 'kubejs:silicium_dust'
-		  },
-		  "C": {
-			"item": 'createaddition:copper_wire'
-		  }
-		},
-		"result": {
-		  "item": "kubejs:transistor_elite",
-		  "count": 1
-		}
-	  }) 
-	event.custom({
-		"type": "extendedcrafting:shaped_table",
-		"pattern": [
-		  " PPPPPPP ",
-		  " PSSSSSP ",
-		  " PSSSSSP ",
-		  " PSAAASP ",
-		  " PSAAASP ",
-		  "  C   C  ",
-		  "  C   C  ",
-		  "  C   C  ",
-		  "  C   C  "
-		],
-		"key": {
-		  "A": {
-			"item": 'mekanism:alloy_atomic'
-		  },
-		  "P": {
-			"item": 'mekanism:hdpe_pellet'
-		  },
-		  "S": {
-			"item": 'kubejs:silicium_dust'
-		  },
-		  "C": {
-			"item": 'createaddition:copper_wire'
-		  }
-		},
-		"result": {
-		  "item": 'kubejs:transistor_ultimate',
-		  "count": 1
-		}
-	  }) 
+	  event.shaped('kubejs:processor', [
+		'TST',
+		'SSS',
+		'TST'
+	  ], {
+		T: 'kubejs:transistor',
+		S: 'kubejs:steel_sheet'
+
+
+
+	  })
 
 	event.custom({
 		"type": "extendedcrafting:shaped_table",
 		"pattern": [
-		  " PPP ",
-		  " PSP ",
-		  " PAP ",
-		  " C C ",
-		  " C C "
+		  " TTT ",
+		  "TSSST",
+		  "TSDST",
+		  "TSSST",
+		  " TTT "
 		],
 		"key": {
-		  "A": {
-			"item": 'mekanism:alloy_infused' 
-		  },
-		  "P": {
-			"item": 'industrialforegoing:tinydryrubber'
+		  "T": {
+			"item": 'kubejs:transistor_advanced'
 		  },
 		  "S": {
-			"item": 'kubejs:silicium_dust'
+			"item": 'kubejs:steel_sheet'
 		  },
-		  "C": {
-			"item": 'createaddition:copper_wire'
+		  "D": {
+			"item": 'kubejs:silicium_dust'
 		  }
+
 		},
 		"result": {
-		  "item": "kubejs:transistor_advanced",
+		  "item": "kubejs:processor_advanced",
 		  "count": 1
 		}
 	  }) 
+
+
 	event.custom({
 		"type": "extendedcrafting:shaped_table",
 		"pattern": [
-		  " PPPPP ",
-		  " PSSSP ",
-		  " PSSSP ",
-		  " PAAAP ",
-		  "  C C  ",
-		  "  C C  ",
-		  "  C C  "
+		  " TTTTT ",
+		  "TSSSSST",
+		  "TSSDSST",
+		  "TSDDDST",
+		  "TSSDSST",
+		  "TSSSSST",
+		  " TTTTT "
 		],
 		"key": {
-		  "A": {
-			"item": 'mekanism:alloy_reinforced'
-		  },
-		  "P": {
-			"item": 'industrialforegoing:tinydryrubber'
-		  },
-		  "S": {
-			"item": 'kubejs:silicium_dust'
-		  },
-		  "C": {
-			"item": 'createaddition:copper_wire'
-		  }
+			"T": {
+			  "item": 'kubejs:transistor_elite'
+			},
+			"S": {
+			  "item": 'kubejs:steel_sheet'
+			},
+			"D": {
+			  "item": 'kubejs:silicium_dust'
+			}
 		},
 		"result": {
-		  "item": "kubejs:transistor_elite",
+		  "item": "kubejs:processor_elite",
 		  "count": 1
 		}
 	  }) 
+
+
 	event.custom({
 		"type": "extendedcrafting:shaped_table",
 		"pattern": [
-		  " PPPPPPP ",
-		  " PSSSSSP ",
-		  " PSSSSSP ",
-		  " PSAAASP ",
-		  " PSAAASP ",
-		  "  C   C  ",
-		  "  C   C  ",
-		  "  C   C  ",
-		  "  C   C  "
+		  " TTTTTTT ",
+		  "TSSSSSSST",
+		  "TSSSDSSST",
+		  "TSSDDDSST",
+		  "TSDDDDDST",
+		  "TSSDDDSST",
+		  "TSSSDSSST",
+		  "TSSSSSSST",
+		  " TTTTTTT "
 		],
 		"key": {
-		  "A": {
-			"item": 'mekanism:alloy_atomic'
-		  },
-		  "P": {
-			"item": 'industrialforegoing:tinydryrubber'
-		  },
-		  "S": {
-			"item": 'kubejs:silicium_dust'
-		  },
-		  "C": {
-			"item": 'createaddition:copper_wire'
-		  }
+			"T": {
+			  "item": 'kubejs:transistor_ultimate'
+			},
+			"S": {
+			  "item": 'kubejs:steel_sheet'
+			},
+			"D": {
+			  "item": 'kubejs:silicium_dust'
+			}
 		},
 		"result": {
-		  "item": 'kubejs:transistor_ultimate',
+		  "item": 'kubejs:processor_ultimate',
 		  "count": 1
 		}
 	  }) 
-
-	  	//crafts processors
-
-		  event.shaped('kubejs:processor', [
-			'TST',
-			'SSS',
-			'TST'
-		  ], {
-			T: 'kubejs:transistor',
-			S: 'kubejs:steel_sheet'
-
-	
-	
-		  })
 
 
 //Autres crafts
