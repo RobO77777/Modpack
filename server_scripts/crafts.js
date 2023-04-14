@@ -1268,58 +1268,11 @@ onEvent('recipes', event => {
 	
 		  })
 
-
-
-
-
-
-
-
-	//Items filters
+//Items filters
 	event.remove({id: /itemfilters/})
 
 
-
-
-
-
-
-
-
-
-/*	event.custom({
-		"type": "extendedcrafting:shaped_table",
-		"pattern": [
-		  "DLLLLLD",
-		  "DGINIGD",
-		  "DGINIGD",
-		  "DLLLLLD"
-		],
-		"key": {
-		  "D": {
-			"tag": "forge:gems/diamond"
-		  },
-		  "L": {
-			"tag": "forge:gems/lapis"
-		  },
-		  "N": {
-			"item": "minecraft:nether_star"
-		  },
-		  "I": {
-			"tag": "forge:ingots/iron"
-		  },
-		  "G": {
-			"tag": "forge:ingots/gold"
-		  }
-		},
-		"result": {
-		  "item": "extendedcrafting:crystaltine_ingot",
-		  "count": 4
-		}
-	  }) */
-
-	  //ec_mining_world_tt
-
+//ec_mining_world_tt
 	  event.remove({id: 'ec_mining_world_tt:miningworld_portal_igniterrecipe'})
 	  event.remove({id: 'ec_mining_world_tt:portalblockrecipe'})
 	  event.shapeless('ec_mining_world_tt:miningworld', ['minecraft:flint_and_steel', '#forge:ores', '#magic_dust'])
@@ -1335,7 +1288,11 @@ onEvent('recipes', event => {
 
   	})
 
-  	
+//draconic evo
+	event.remove({id: 'draconicevolution:components/draconium_ingot'})
+	event.remove({id: 'draconicevolution:draconium_ingot'})
+	event.recipes.createMixing('2x draconicevolution:draconium_ingot', ['2x draconicevolution:draconium_dust', 'mekanism:dust_lithium']).superheated()
+	event.recipes.createMixing('2x draconicevolution:draconium_ingot', ['2x draconicevolution:draconium_dust', 'mekanism:dust_lithium', Fluid.of("minecraft:lava", 500)])
 })
 
 
