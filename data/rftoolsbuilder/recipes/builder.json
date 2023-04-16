@@ -2,15 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "BoB",
-    "rFr",
-    "BrB"
+    "PFC",
+    "BDB"
   ],
   "key": {
     "B": {
       "item": "minecraft:bricks"
     },
-    "r": {
-      "item": "minecraft:redstone"
+    "D": {
+      "item": "create:mechanical_drill"
+    },
+    "C": {
+      "item": "create:schematicannon"
+    },
+    "P": {
+      "item": "create:mechanical_pump"
     },
     "F": {
       "item": "industrialforegoing:machine_frame_pity"
