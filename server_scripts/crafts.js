@@ -773,7 +773,7 @@ onEvent('recipes', event => {
 
 	event.recipes.createMixing('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite']).heated()
 	event.recipes.createMixing('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite', Fluid.of("minecraft:lava", 100)])
-	event.recipes.createMixing('kubejs:cement', ['minecraft:sand', 'minecraft:gravel', Fluid.of("minecraft:water", 500)])
+	event.recipes.createMixing('2x kubejs:cement', ['minecraft:sand', 'minecraft:gravel', Fluid.of("minecraft:water", 500)])
 	
 	event.stonecutting('create:cogwheel', 'create:large_cogwheel')
 	event.stonecutting('4x create:shaft', 'create:andesite_alloy')
@@ -1249,7 +1249,8 @@ onEvent('recipes', event => {
 
 //rftools
 	event.remove({id: 'rftoolsbase:machine_frame'})
-
+//tinker TK
+	event.remove({id: 'tconstruct:common/flint'})
 })
 
 
