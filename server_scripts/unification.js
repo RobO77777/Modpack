@@ -379,4 +379,52 @@ onEvent('recipes', event => {
 	event.smelting('iceandfire:silver_nugget', 'iceandfire:silver_ore')
 	event.blasting('iceandfire:silver_nugget', 'iceandfire:silver_ore')
 
+	//thallasium
+	
+	event.remove({id: 'betterendforge:thallasium_ingot_from_blasting'})
+	event.remove({id: 'betterendforge:thallasium_ingot_from_smelting'})
+	
+	event.recipes.createCrushing('kubejs:crushed_thallasium_ore', ['betterendforge:thallasium_ore'])
+	event.custom({
+		"type": "create:milling",
+		"ingredients": [
+		  {
+			"item": 'betterendforge:thallasium_ore'
+		  }
+		],
+		"results": [
+		  {
+			"item": 'kubejs:crushed_thallasium_ore',
+			"chance": 1
+		  }
+		],
+		"processingTime": 50
+	})
+	event.recipes.createCrushing('kubejs:dust_thallasium', ['kubejs:crushed_thallasium_ore'])
+	event.custom({
+		"type": "create:milling",
+		"ingredients": [
+		  {
+			"item": 'kubejs:crushed_thallasium_ore'
+		  }
+		],
+		"results": [
+		  {
+			"item": 'kubejs:dust_thallasium',
+			"chance": 1
+		  }
+		],
+		"processingTime": 50
+	})
+
+	event.custom({"type":"mekanism:enriching","input":{"ingredient":{"tag":"forge:ores/thallasium"}},"output":{"item":"kubejs:dust_thallasium","count":2}})
+	
+	event.smelting('betterendforge:thallasium_ingot', 'kubejs:dust_thallasium')
+	event.blasting('betterendforge:thallasium_ingot', 'kubejs:dust_thallasium')
+	event.smelting('betterendforge:thallasium_ingot', 'kubejs:crushed_thallasium_ore')
+	event.blasting('betterendforge:thallasium_ingot', 'kubejs:crushed_thallasium_ore')
+	event.smelting('betterendforge:thallasium_nugget', 'betterendforge:thallasium_ore')
+	event.blasting('betterendforge:thallasium_nugget', 'betterendforge:thallasium_ore')
+
+
 })
