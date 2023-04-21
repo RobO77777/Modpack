@@ -36,6 +36,9 @@ onEvent('item.tags', event => {
     //kubejs
     event.add('forge:planks', 'kubejs:wood_casing')
 
+    //crushed ore
+
+    event.add('forge:crushed_ores/iron', 'create:crushed_iron_ore')
 
 })
 
