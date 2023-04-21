@@ -766,10 +766,6 @@ onEvent('recipes', event => {
 	event.remove({id: 'create:crafting/materials/andesite_casing'})	
 	
 
-	event.smelting('minecraft:iron_nugget', 'minecraft:iron_ore')
-	event.blasting('minecraft:iron_nugget', 'minecraft:iron_ore')
-	event.smelting('create:copper_nugget', 'create:copper_ore')
-	event.blasting('create:copper_nugget', 'create:copper_ore')
 
 	event.recipes.createMixing('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite']).heated()
 	event.recipes.createMixing('create:andesite_alloy', ['kubejs:cement', 'minecraft:andesite', Fluid.of("minecraft:lava", 100)])
@@ -841,7 +837,6 @@ onEvent('recipes', event => {
     	A: 'mekanism:alloy_infused'
 
   	})
-	
 
 		//mekanism pipe
 

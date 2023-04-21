@@ -19,6 +19,7 @@ onEvent('item.registry', event => {
     event.create('steel_rod').displayName('Steel rod')
 
     event.create('dust_zinc').displayName('Zinc Dust')
+    event.create('dust_silver').displayName('Silver Dust')
     event.create('cement').displayName('Cement')
 
     //items ordi

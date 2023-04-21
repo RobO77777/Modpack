@@ -104,6 +104,10 @@ onEvent('recipes', event => {
 		"processingTime": 50
 	})
 
+	event.smelting('minecraft:iron_nugget', 'minecraft:iron_ore')
+	event.blasting('minecraft:iron_nugget', 'minecraft:iron_ore')
+
+
 	//gold
 
 	event.remove({id: 'minecraft:gold_ingot_from_blasting'})
@@ -124,6 +128,10 @@ onEvent('recipes', event => {
 		],
 		"processingTime": 50
 	})
+	event.smelting('minecraft:gold_nugget', 'minecraft:gold_ore')
+	event.blasting('minecraft:gold_nugget', 'minecraft:gold_ore')
+	event.smelting('minecraft:gold_nugget', 'mythicbotany:gold_ore')
+	event.blasting('minecraft:gold_nugget', 'mythicbotany:gold_ore')
 
 	//copper
 
@@ -168,6 +176,9 @@ onEvent('recipes', event => {
 	event.remove({output: 'mekanism:ore_copper'})
 	event.remove({output: 'iceandfire:copper_ore'})	
 
+	event.smelting('create:copper_nugget', 'create:copper_ore')
+	event.blasting('create:copper_nugget', 'create:copper_ore')
+	
 	//améthyste
 
 	event.remove({id: 'iceandfire:amythest_ore'})
@@ -177,7 +188,13 @@ onEvent('recipes', event => {
 	event.remove({id: 'iceandfire:furnace/amythest'})	
 
 	//uranium
+	
+	event.remove({id: 'mekanism:processing/uranium/ingot/from_ore_blasting'})
+	event.remove({id: 'mekanism:processing/uranium/ingot/from_ore_smelting'})
 
+	event.smelting('mekanism:nugget_uranium', 'mekanism:uranium_ore')
+	event.blasting('mekanism:nugget_uranium', 'mekanism:uranium_ore')
+	
 	//osmium
 
 	event.remove({id: 'mekanism:processing/osmium/ingot/from_ore_smelting'})
@@ -198,6 +215,9 @@ onEvent('recipes', event => {
 		],
 		"processingTime": 50
 	})
+
+	event.smelting('mekanism:nugget_osmium', 'mekanism:osmium_ore')
+	event.blasting('mekanism:nugget_osmium', 'mekanism:osmium_ore')
 
 	//zinc
 	
@@ -223,8 +243,11 @@ onEvent('recipes', event => {
 		"processingTime": 50
 	})
 
-
-
+	
+	event.custom({"type":"mekanism:enriching","input":{"ingredient":{"tag":"forge:ores/zinc"}},"output":{"item":"kubejs:dust_zinc","count":2}})
+	
+	event.smelting('create:zinc_nugget', 'create:zinc_ore')
+	event.blasting('create:zinc_nugget', 'create:zinc_ore')
 
 	//silicium
 
@@ -282,6 +305,8 @@ onEvent('recipes', event => {
 	event.blasting('mekanism:ingot_bronze', 'kubejs:crushed_bronze_ore')
 
 	//tin
+	event.remove({id: 'mekanism:processing/tin/ingot/from_ore_smelting'})
+	event.remove({id: 'mekanism:processing/tin/ingot/from_ore_blasting'})
 
 	event.recipes.createCrushing('mekanism:dust_tin', ['create:crushed_tin_ore'])
 	event.custom({
@@ -300,7 +325,12 @@ onEvent('recipes', event => {
 		"processingTime": 50
 	})
 
+	event.smelting('mekanism:nugget_tin', 'mekanism:tin_ore')
+	event.blasting('mekanism:nugget_tin', 'mekanism:tin_ore')
+
 	//lead
+	event.remove({id: 'mekanism:processing/lead/ingot/from_ore_smelting'})
+	event.remove({id: 'mekanism:processing/lead/ingot/from_ore_blasting'})
 
 	event.recipes.createCrushing('mekanism:dust_lead', ['create:crushed_lead_ore'])
 	event.custom({
@@ -318,6 +348,35 @@ onEvent('recipes', event => {
 		],
 		"processingTime": 50
 	})
+	event.smelting('mekanism:nugget_lead', 'mekanism:lead_ore')
+	event.blasting('mekanism:nugget_lead', 'mekanism:lead_ore')
 
+	//silver
+
+	event.remove({id: 'iceandfire:furnace/silver_ingot'})
+	event.remove({id: 'iceandfire:furnace/silver_ingot_blasting'})
+	event.recipes.createCrushing('kubejs:dust_silver', ['create:crushed_silver_ore'])
+	event.custom({
+		"type": "create:milling",
+		"ingredients": [
+		  {
+			"item": 'create:crushed_silver_ore'
+		  }
+		],
+		"results": [
+		  {
+			"item": 'kubejs:dust_silver',
+			"chance": 1
+		  }
+		],
+		"processingTime": 50
+	})
+	event.smelting('iceandfire:silver_ingot', 'kubejs:dust_silver')
+	event.blasting('iceandfire:silver_ingot', 'kubejs:dust_silver')
+	
+	event.custom({"type":"mekanism:enriching","input":{"ingredient":{"tag":"forge:ores/silver"}},"output":{"item":"kubejs:dust_silver","count":2}})
+		
+	event.smelting('iceandfire:silver_nugget', 'iceandfire:silver_ore')
+	event.blasting('iceandfire:silver_nugget', 'iceandfire:silver_ore')
 
 })
