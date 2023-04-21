@@ -34,7 +34,9 @@ onEvent('item.tags', event => {
     event.add('forge:wither_bones', 'iceandfire:witherbone')
 
     //kubejs
-    event.add('forge:planks', 'kubejs:wood_casing')
+
+    event.add('minecraft:planks', 'kubejs:wood_casing')
+    event.add('tconstruct:planklike', 'kubejs:wood_casing')
 
     //crushed ore
 
