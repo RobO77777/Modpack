@@ -18,8 +18,7 @@ onEvent('item.registry', event => {
     event.create('steel_wire').displayName('Steel wire')
     event.create('steel_rod').displayName('Steel rod')
 
-    event.create('dust_zinc').displayName('Zinc Dust')
-    event.create('dust_silver').displayName('Silver Dust')
+    
     event.create('cement').displayName('Cement')
 
     //items ordi
@@ -36,7 +35,15 @@ onEvent('item.registry', event => {
     event.create('transistor_ultimate').displayName('Ultimate Transistor')
 
     //molten ore
+   
     event.create('crushed_bronze_ore').displayName('Crushed Bronze Ore')
     event.create('crushed_steel_ore').displayName('Crushed Steel Ore')
+    event.create('crushed_thallasium_ore').displayName('Crushed Thallasium Ore')
 
+    //dust
+
+    
+    event.create('dust_zinc').displayName('Zinc Dust')
+    event.create('dust_silver').displayName('Silver Dust')
+    event.create('dust_thallasium').displayName('Thallasium Dust')
   })
