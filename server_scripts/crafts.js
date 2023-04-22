@@ -83,7 +83,8 @@ onEvent('recipes', event => {
 			  }
 			],
 			"result": {
-			  "item": 'cgm:basic_bullet'
+			  "item": 'cgm:basic_bullet',
+			  "count": 20
 			}
 		  }
 		)
