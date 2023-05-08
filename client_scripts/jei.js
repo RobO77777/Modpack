@@ -72,6 +72,10 @@ onEvent('jei.hide.items', event => {
 		'chiselsandbits:block_bit',
 		'iceandfire:bestiary',
 		'rftoolsbase:machine_frame',
+		'explorercraft:rice_straw',
+		'explorercraft:rice_straw_block',
+		'explorercraft:rice',
+		'explorercraft:rice_bowl',
 	])
 
 

@@ -22,7 +22,7 @@ onEvent('recipes', event => {
 			],
 			"result": {
 			  "item": "cgm:advanced_bullet",
-			  "count": 16
+			  "count": 12
 			}
 		  }
 	)
@@ -513,7 +513,7 @@ onEvent('recipes', event => {
 			],
 			"result": {
 			  "item": "cgm:shell",
-			  "count": 24
+			  "count": 14
 			}
 		  }
 		)
@@ -788,7 +788,7 @@ onEvent('recipes', event => {
   	], {
     	C: 'create:andesite_casing',
     	S: 'create:shaft',
-    	R: 'farmersdelight:rope',
+    	R: 'createaddition:copper_spool',
     	I: 'create:iron_sheet',
 
 
@@ -838,9 +838,14 @@ onEvent('recipes', event => {
     	A: 'mekanism:alloy_infused'
 
   	})
+		//bio fuel
 
+	event.custom({"type":"mekanism:crushing","input":{"ingredient":{"tag":'forge:vegetables'}},"output":{"item":"mekanism:bio_fuel","count":5}})
+	event.custom({"type":"mekanism:crushing","input":{"ingredient":{"tag":'forge:seeds'}},"output":{"item":"mekanism:bio_fuel","count":2}})
+		
 		//mekanism pipe
 
+//Industrial foregoing
 
 //Spartan
 
@@ -1247,6 +1252,13 @@ onEvent('recipes', event => {
 	event.remove({id: 'rftoolsbase:machine_frame'})
 //tinker TK
 	event.remove({id: 'tconstruct:common/flint'})
+
+//farmers delight
+
+	event.remove({id: 'explorercraft:rice_straw'})
+	event.remove({id: 'explorercraft:rice_straw_block'})
+	event.remove({id: 'explorercraft:rice_bowl'})
+
 })
 
 
