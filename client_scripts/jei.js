@@ -28,7 +28,6 @@ onEvent('jei.hide.items', event => {
 		/creative/,
 		/electrum/,
 		/ceramic/,
-		//Items filters
 		/itemfilters/,
 		/ftbquests/,
 		/ftblibrary/,
@@ -119,28 +118,28 @@ onEvent('jei.information', event => {
 	
 	
 	event.add('projecte:relay_mk1', [
-		'Surrounds the core of the flower at EMC. There are several versions of this block.'
+		'Surrounds the core of the EMC flower. There are several versions of this block.'
 	])
 	event.add('projecte:relay_mk2', [
-		'Surrounds the core of the flower at EMC. There are several versions of this block.'
+		'Surrounds the core of the EMC flower. There are several versions of this block.'
 	])
 	event.add('projecte:relay_mk3', [
-		'Surrounds the core of the flower at EMC. There are several versions of this block.'
+		'Surrounds the core of the EMC flower. There are several versions of this block.'
 	])
 	event.add('projecte:condenser_mk1', [
-		'Heart of the flower at EMC, stores the generated items. There are several versions of this block.'
+		'Heart of the EMC flower, stores the generated items. There are several versions of this block.'
 	])
 	event.add('projecte:condenser_mk2', [
-		'Heart of the flower at EMC, stores the generated items. There are several versions of this block.'
+		'Heart of the EMC flower, stores the generated items. There are several versions of this block.'
 	])
 	event.add('projecte:collector_mk1', [
-		'External part of the flower at EMC, generates EMC to the machine to duplicate items. There are several versions of this block.'
+		'External part of the EMC flower, generates EMC to the machine to duplicate items. There are several versions of this block.'
 	])
 	event.add('projecte:collector_mk2', [
-		'External part of the flower at EMC, generates EMC to the machine to duplicate items. There are several versions of this block.'
+		'External part of the EMC flower, generates EMC to the machine to duplicate items. There are several versions of this block.'
 	])
 	event.add('projecte:collector_mk3', [
-		'External part of the flower at EMC, generates EMC to the machine to duplicate items. There are several versions of this block.'
+		'External part of the EMC flower, generates EMC to the machine to duplicate items. There are several versions of this block.'
 	])
 	event.add('projecte:transmutation_table', [
 		'Converts items to EMC to convert EMC into other items.'
