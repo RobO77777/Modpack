@@ -948,6 +948,29 @@ onEvent('recipes', event => {
 	event.shapeless('4x minecraft:cobblestone', ['minecraft:stone', '#forge:dusts/glowstone'])
 	event.smelting('mekanism:dust_charcoal', '#minecraft:planks')
 
+	event.custom({
+		"type": "create:crushing",
+		"ingredients": [
+		  {
+			"item": "minecraft:granite"
+		  }
+		],
+		"results": [
+		  {
+			"item": "minecraft:gravel"
+		  },
+		  {
+			"item": "minecraft:flint",
+			"chance": 0.1
+		  },
+		  {
+			"item": "minecraft:quartz",
+			"chance": 0.2
+		  }
+		],
+		"processingTime": 250
+	  })
+
 //Kubejs
 
 		//electric motor
