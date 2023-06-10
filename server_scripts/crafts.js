@@ -947,7 +947,7 @@ onEvent('recipes', event => {
 
 	event.shapeless('4x minecraft:cobblestone', ['minecraft:stone', '#forge:dusts/glowstone'])
 	event.smelting('mekanism:dust_charcoal', '#minecraft:planks')
-
+	event.remove({id: 'create:milling/granite'})
 	event.custom({
 		"type": "create:crushing",
 		"ingredients": [
