@@ -816,7 +816,342 @@ onEvent('recipes', event => {
 			"count": 2
 		}
 	})
+		//craft 5x5
+		event.custom({
+			"type": "extendedcrafting:shaped_table",
+			"pattern": [
+			  "     ",
+			  "  A  ",
+			  " BSB ",
+			  "BSRSB",
+			  " BCB "
+			],
+			"key": {
+			  "B": {
+				"item": 'create:brass_sheet'
+			  },
+			  "S": {
+				"item": 'createaddition:copper_spool'
+			  },
+			  "C": {
+				"item": 'createaddition:capacitor'
+			  },
+			  "A": {
+				"item": 'create:andesite_alloy'
+			  },
+			  "R": {
+				"item": 'createaddition:iron_rod'
+			  }
+	
+			},
+			"result": {
+			  "item": 'createaddition:electric_motor',
+			  "count": 1
+			}
+		  }) 
+	
+		event.custom({
+			"type": "extendedcrafting:shaped_table",
+			"pattern": [
+			  "     ",
+			  "  A  ",
+			  " BSB ",
+			  "BSRSB",
+			  " BCB "
+			],
+			"key": {
+			  "B": {
+				"item": 'create:iron_sheet'
+			  },
+			  "S": {
+				"item": 'createaddition:copper_spool'
+			  },
+			  "C": {
+				"item": 'createaddition:capacitor'
+			  },
+			  "A": {
+				"item": 'create:andesite_alloy'
+			  },
+			  "R": {
+				"item": 'createaddition:iron_rod'
+			  }
+	
+			},
+			"result": {
+			  "item": 'createaddition:alternator',
+			  "count": 1
+			}
+		  }) 
+	
+		event.custom({
+			"type": "extendedcrafting:shaped_table",
+			"pattern": [
+			  "     ",
+			  " N N ",
+			  "BCSCB",
+			  "BCACB",
+			  "BCSCB"
+			],
+			"key": {
+			  "B": {
+				"item": 'create:brass_sheet'
+			  },
+			  "S": {
+				"item": 'createaddition:gold_spool'
+			  },
+			  "C": {
+				"item": 'createaddition:capacitor'
+			  },
+			  "A": {
+				"item": 'create:brass_casing'
+			  },
+			  "N": {
+				"item": 'createaddition:connector'
+			  }
+	
+			},
+			"result": {
+			  "item": 'createaddition:accumulator',
+			  "count": 1
+			}
+		  }) 
+	
+		event.custom({
+			"type": "extendedcrafting:shaped_table",
+			"pattern": [
+			  "     ",
+			  " SSS ",
+			  "  A  ",
+			  " CEC ",
+			  " BTB "
+			],
+			"key": {
+			  "B": {
+				"item": 'create:brass_sheet'
+			  },
+			  "S": {
+				"item": 'createaddition:copper_spool'
+			  },
+			  "C": {
+				"item": 'createaddition:capacitor'
+			  },
+			  "E": {
+				"item": 'create:brass_casing'
+			  },
+			  "A": {
+				"item": 'create:andesite_alloy'
+			  },
+			  "T": {
+				"item": 'create:electron_tube'
+			  },
 
+	
+			},
+			"result": {
+			  "item": 'createaddition:tesla_coil',
+			  "count": 1
+			}
+		  }) 
+	
+		event.custom({
+			"type": "extendedcrafting:shaped_table",
+			"pattern": [
+			  "     ",
+			  "     ",
+			  "AMPPP",
+			  "CC   ",
+			  "     "
+			],
+			"key": {
+			  "C": {
+				"item": 'create:copper_ingot'
+			  },
+			  "M": {
+				"item": 'create:precision_mechanism'
+			  },
+			  "P": {
+				"item": 'create:fluid_pipe'
+			  },
+			  "A": {
+				"item": 'create:andesite_alloy'
+			  }
+	
+			},
+			"result": {
+			  "item": 'create:potato_cannon',
+			  "count": 1
+			}
+		  }) 
+	
+		event.custom({
+			"type": "extendedcrafting:shaped_table",
+			"pattern": [
+			  "     ",
+			  " ANA ",
+			  " ANA ",
+			  "  O  ",
+			  "  O  "
+			],
+			"key": {
+			  "O": {
+				"item": 'minecraft:obsidian'
+			  },
+			  "A": {
+				"item": 'createaddition:overcharged_alloy'
+			  },
+			  "N": {
+				"item": 'minecraft:netherite_ingot'
+			  }
+	
+			},
+			"result": {
+			  "item": 'createaddition:overcharged_hammer',
+			  "count": 1
+			}
+		  }) 
+	
+		event.custom({
+			"type": "extendedcrafting:shaped_table",
+			"pattern": [
+			  " AAA ",
+			  "AAPAA",
+			  "APSPA",
+			  "AAPAA",
+			  " AAA "
+			],
+			"key": {
+			  "P": {
+				"tag": 'minecraft:planks'
+			  },
+			  "A": {
+				"item": 'create:andesite_alloy'
+			  },
+			  "S": {
+				"tag": 'forge:stone'
+			  }
+	
+			},
+			"result": {
+			  "item": 'create:crushing_wheel',
+			  "count": 2
+			}
+		  }) 
+	
+		event.custom({
+			"type": "extendedcrafting:shaped_table",
+			"pattern": [
+			  "  I  ",
+			  "  M  ",
+			  " SSS ",
+			  " SSS ",
+			  "  H  "
+			],
+			"key": {
+			  "H": {
+				"item": 'create:brass_hand'
+			  },
+			  "I": {
+				"item": 'create:brass_ingot'
+			  },
+			  "S": {
+				"item": 'minecraft:stick'
+			  },
+			  "M": {
+				"item": 'create:precision_mechanism'
+			  }
+	
+			},
+			"result": {
+			  "item": 'create:extendo_grip',
+			  "count": 1
+			}
+		  }) 
+
+		event.custom({
+			"type": "extendedcrafting:shaped_table",
+			"pattern": [
+			  "     ",
+			  " III ",
+			  "CI I ",
+			  " III ",
+			  "     "
+			],
+			"key": {
+			  "C": {
+				"item": 'create:brass_casing'
+			  },
+			  "I": {
+				"item": 'create:brass_ingot'
+			  }
+	
+			},
+			"result": {
+			  "item": 'create:flywheel',
+			  "count": 1
+			}
+		  }) 
+	
+		event.custom({
+			"type": "extendedcrafting:shaped_table",
+			"pattern": [
+			  "     ",
+			  " SSI ",
+			  " SCP ",
+			  " SSI ",
+			  "     "
+			],
+			"key": {
+			  "C": {
+				"item": 'create:brass_casing'
+			  },
+			  "S": {
+				"item": 'create:brass_sheet'
+			  },
+			  "P": {
+				"item": 'minecraft:piston'
+			  },
+			  "I": {
+				"item": 'create:brass_ingot'
+			  }
+	
+			},
+			"result": {
+			  "item": 'create:furnace_engine',
+			  "count": 1
+			}
+		  }) 
+		event.custom({
+			"type": "extendedcrafting:shaped_table",
+			"pattern": [
+			  "     ",
+			  " SSI ",
+			  " SCP ",
+			  " SSI ",
+			  "     "
+			],
+			"key": {
+			  "C": {
+				"item": 'create:brass_casing'
+			  },
+			  "S": {
+				"item": 'create:brass_sheet'
+			  },
+			  "P": {
+				"item": 'minecraft:sticky_piston'
+			  },
+			  "I": {
+				"item": 'create:brass_ingot'
+			  }
+	
+			},
+			"result": {
+			  "item": 'create:furnace_engine',
+			  "count": 1
+			}
+		  }) 
+	
+	
+	
 //mekanism
 
 	event.remove({output: 'mekanismgenerators:wind_generator'})
