@@ -12,6 +12,7 @@ onEvent('item.tooltip', tooltip => {
       //text.add(0, Text.of('Hello')) // Adds text in first line, pushing the items name down a line. If you want the line below the item name, the index must be 1
     
     //tooltip.add('minecraft:bedrock', 'This is Bedrock')
+    tooltip.add('mod_modpack:minerdimension', 'Use gilded blackstone !')
 
     
     

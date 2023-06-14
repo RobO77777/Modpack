@@ -271,7 +271,54 @@ onEvent('recipes', event => {
 			  "tag": "forge:ingots/silicium"
 			},
 			"result": {
-			  "fluid": "tconstruct:molten_silicium",
+			  "fluid": "mod_modpack:moltensilicium",
+			  "amount": 144
+			},
+			"temperature": 950,
+			"time": 65
+		  }
+	)
+	event.custom(
+		{
+			"type": "tconstruct:melting",
+			"conditions": [
+			  {
+				"value": {
+				  "tag": "forge:dusts/silicium",
+				  "type": "forge:tag_empty"
+				},
+				"type": "forge:not"
+			  }
+			],
+			"ingredient": {
+			  "tag": "forge:dusts/silicium"
+			},
+			"result": {
+			  "fluid": "mod_modpack:moltensilicium",
+			  "amount": 144
+			},
+			"temperature": 950,
+			"time": 65
+		  }
+	)
+
+	event.custom(
+		{
+			"type": "tconstruct:melting",
+			"conditions": [
+			  {
+				"value": {
+				  "tag": "forge:plates/silicium",
+				  "type": "forge:tag_empty"
+				},
+				"type": "forge:not"
+			  }
+			],
+			"ingredient": {
+			  "tag": "forge:plates/silicium"
+			},
+			"result": {
+			  "fluid": "mod_modpack:moltensilicium",
 			  "amount": 144
 			},
 			"temperature": 950,
@@ -279,6 +326,54 @@ onEvent('recipes', event => {
 		  }
 	)
 	
+	
+	event.custom({
+		"type": "tconstruct:casting_table",
+		"conditions": [
+		  {
+			"value": {
+			  "tag": "forge:ingots/silicium",
+			  "type": "forge:tag_empty"
+			},
+			"type": "forge:not"
+		  }
+		],
+		"cast": {
+		  "tag": "tconstruct:casts/multi_use/ingot"
+		},
+		"fluid": {
+		  "tag": "forge:molten_silicium",
+		  "amount": 144
+		},
+		"result": {
+		  "item": "kubejs:silicium_ingot"
+		},
+		"cooling_time": 43
+	  })
+
+	event.custom({
+		"type": "tconstruct:casting_table",
+		"conditions": [
+		  {
+			"value": {
+			  "tag": "forge:plates/silicium",
+			  "type": "forge:tag_empty"
+			},
+			"type": "forge:not"
+		  }
+		],
+		"cast": {
+		  "tag": "tconstruct:casts/multi_use/plate"
+		},
+		"fluid": {
+		  "tag": "forge:molten_silicium",
+		  "amount": 144
+		},
+		"result": {
+		  "item": "kubejs:silicium_sheet"
+		},
+		"cooling_time": 43
+	  })
 	//steel
 
 	event.recipes.createPressing('kubejs:steel_sheet', '#forge:ingots/steel')
@@ -426,5 +521,256 @@ onEvent('recipes', event => {
 	event.smelting('betterendforge:thallasium_nugget', 'betterendforge:thallasium_ore')
 	event.blasting('betterendforge:thallasium_nugget', 'betterendforge:thallasium_ore')
 
+	event.custom(
+		{
+			"type": "tconstruct:melting",
+			"conditions": [
+			  {
+				"value": {
+				  "tag": "forge:ingots/thallasium",
+				  "type": "forge:tag_empty"
+				},
+				"type": "forge:not"
+			  }
+			],
+			"ingredient": {
+			  "tag": "forge:ingots/thallasium"
+			},
+			"result": {
+			  "fluid": "mod_modpack:moltenthallasium",
+			  "amount": 144
+			},
+			"temperature": 950,
+			"time": 65
+		  }
+	)
+	event.custom(
+		{
+			"type": "tconstruct:melting",
+			"conditions": [
+			  {
+				"value": {
+				  "tag": "forge:dusts/thallasium",
+				  "type": "forge:tag_empty"
+				},
+				"type": "forge:not"
+			  }
+			],
+			"ingredient": {
+			  "tag": "forge:dusts/thallasium"
+			},
+			"result": {
+			  "fluid": "mod_modpack:moltenthallasium",
+			  "amount": 144
+			},
+			"temperature": 950,
+			"time": 65
+		  }
+	)
+	event.custom(
+		{
+			"type": "tconstruct:melting",
+			"conditions": [
+			  {
+				"value": {
+				  "tag": "forge:crushed_ores/thallasium",
+				  "type": "forge:tag_empty"
+				},
+				"type": "forge:not"
+			  }
+			],
+			"ingredient": {
+			  "tag": "forge:crushed_ores/thallasium"
+			},
+			"result": {
+			  "fluid": "mod_modpack:moltenthallasium",
+			  "amount": 144
+			},
+			"temperature": 950,
+			"time": 65
+		  }
+	)
+	event.custom(
+		{
+			"type": "tconstruct:melting",
+			"conditions": [
+			  {
+				"value": {
+				  "tag": "forge:nuggets/thallasium",
+				  "type": "forge:tag_empty"
+				},
+				"type": "forge:not"
+			  }
+			],
+			"ingredient": {
+			  "tag": "forge:nuggets/thallasium"
+			},
+			"result": {
+			  "fluid": "mod_modpack:moltenthallasium",
+			  "amount": 16
+			},
+			"temperature": 700,
+			"time": 65
+		  }
+	)
 
+	event.custom(
+		{
+			"type": "tconstruct:melting",
+			"conditions": [
+			  {
+				"value": {
+				  "tag": "forge:ores/thallasium",
+				  "type": "forge:tag_empty"
+				},
+				"type": "forge:not"
+			  }
+			],
+			"ingredient": {
+			  "tag": "forge:ores/thallasium"
+			},
+			"result": {
+			  "fluid": "mod_modpack:moltenthallasium",
+			  "amount": 144
+			},
+			"temperature": 1450,
+			"time": 194
+		  }
+	)
+	event.custom({
+		"type": "tconstruct:casting_table",
+		"conditions": [
+		  {
+			"value": {
+			  "tag": "forge:ingots/thallasium",
+			  "type": "forge:tag_empty"
+			},
+			"type": "forge:not"
+		  }
+		],
+		"cast": {
+		  "tag": "tconstruct:casts/multi_use/ingot"
+		},
+		"fluid": {
+		  "tag": "forge:molten_thallasium",
+		  "amount": 144
+		},
+		"result": {
+		  "item": "betterendforge:thallasium_ingot"
+		},
+		"cooling_time": 43
+	  })
+
+	event.custom({
+		"type": "tconstruct:casting_table",
+		"conditions": [
+		  {
+			"value": {
+			  "tag": "forge:nuggets/thallasium",
+			  "type": "forge:tag_empty"
+			},
+			"type": "forge:not"
+		  }
+		],
+		"cast": {
+		  "tag": "tconstruct:casts/multi_use/nugget"
+		},
+		"fluid": {
+		  "tag": "forge:molten_thallasium",
+		  "amount": 16
+		},
+		"result": {
+		  "item": "betterendforge:thallasium_nugget"
+		},
+		"cooling_time": 22
+	  })
+
+	  event.custom({
+		"type": "tconstruct:casting_basin",
+		"conditions": [
+		  {
+			"value": {
+			  "item": "betterendforge:thallasium_block",
+			  "type": "forge:tag_empty"
+			},
+			"type": "forge:not"
+		  }
+		],
+		"fluid": {
+		  "tag": "forge:molten_thallasium",
+		  "amount": 1296
+		},
+		"result": {
+		  "item": 'betterendforge:thallasium_block'
+		},
+		"cooling_time": 194
+	  })
+	
+   //draconium
+   event.custom(
+	{
+		"type": "tconstruct:melting",
+		"conditions": [
+		  {
+			"value": {
+			  "tag": "forge:ingots/draconium",
+			  "type": "forge:tag_empty"
+			},
+			"type": "forge:not"
+		  }
+		],
+		"ingredient": {
+		  "tag": "forge:ingots/draconium"
+		},
+		"result": {
+		  "fluid": "mod_modpack:moltendraconium",
+		  "amount": 144
+		},
+		"temperature": 950,
+		"time": 65
+	  }
+)
+	event.custom({
+		"type": "tconstruct:casting_table",
+		"conditions": [
+		  {
+			"value": {
+			  "tag": "forge:ingots/draconium",
+			  "type": "forge:tag_empty"
+			},
+			"type": "forge:not"
+		  }
+		],
+		"cast": {
+		  "tag": "tconstruct:casts/multi_use/ingot"
+		},
+		"fluid": {
+		  "tag": "forge:molten_draconium",
+		  "amount": 144
+		},
+		"result": {
+		  "item": "draconicevolution:draconium_ingot"
+		},
+		"cooling_time": 43
+	  })
+	  event.custom({
+		"type": "tconstruct:casting_basin",
+		"conditions": [
+		  {
+			"value": {
+			  "tag": "forge:storage_blocks/draconium",
+			  "type": "forge:tag_empty"
+			},
+			"type": "forge:not"
+		  }
+		],
+		"fluid": {
+		  "tag": "forge:molten_draconium",
+		  "amount": 1296
+		},
+		"result": {
+		  "tag": "forge:storage_blocks/draconium"
+		},
+		"cooling_time": 194
+	  })
 })

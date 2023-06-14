@@ -42,13 +42,30 @@ onEvent('item.tags', event => {
 
     event.add('forge:crushed_ores/iron', 'create:crushed_iron_ore')
 
+    //thallasium
+
+    event.add('forge:dusts/thallasium', 'kubejs:dust_thallasium')
+    event.add('forge:crushed_ores/thallasium', 'kubejs:crushed_thallasium_ore')
+
+    //draconium
+
 })
 
 //blocks tags
 onEvent('block.tags', event => {
-    
 
 
+
+
+
+})
+
+//fluid tags
+onEvent('fluid.tags', event => {
+
+    event.add('forge:molten_draconium', 'mod_modpack:moltendraconium')
+    event.add('forge:molten_thallasium', 'mod_modpack:moltenthallasium')
+    event.add('forge:molten_silicium', 'mod_modpack:moltensilicium')
 
 
 

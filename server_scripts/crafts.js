@@ -1583,21 +1583,18 @@ onEvent('recipes', event => {
 	event.remove({id: /itemfilters/})
 
 
-//ec_mining_world_tt
-	  event.remove({id: 'ec_mining_world_tt:miningworld_portal_igniterrecipe'})
-	  event.remove({id: 'ec_mining_world_tt:portalblockrecipe'})
-	  event.shapeless('ec_mining_world_tt:miningworld', ['minecraft:flint_and_steel', '#forge:ores', '#magic_dust'])
-	  event.shaped('ec_mining_world_tt:portalblock', [
-    	'OBO',
-   		'BDB',
-  		'OBO'
-  	], {
-    	O: '#forge:ores',
-    	B: 'minecraft:stone_bricks',
-    	D: 'minecraft:green_dye',
+//mood reborn addon
 
+	  event.shapeless('mod_modpack:minerdimension', ['minecraft:flint_and_steel', '#forge:ores', '#magic_dust'])
+	  event.shaped('mod_modpack:walkman', [
+		'PPP',
+		'PJP',
+		'PPP'
+	  ], {
+		P: 'mekanism:ingot_steel',
+		J: 'minecraft:jukebox'
 
-  	})
+	  })
 
 //draconic evo
 	event.remove({id: 'draconicevolution:components/draconium_ingot'})
